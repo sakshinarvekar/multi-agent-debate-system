@@ -1,0 +1,173 @@
+================================================================
+COMMANDS REFERENCE — Multi-Agent Debate System 
+================================================================
+
+----------------------------------------------------------------
+ENVIRONMENT SETUP
+----------------------------------------------------------------
+
+# create conda environment
+conda create -n debate python=3.10
+conda activate debate
+
+# install dependencies
+pip install -r requirements.txt
+pip install datasets
+
+
+----------------------------------------------------------------
+MEMORY — RESET & LOAD
+----------------------------------------------------------------
+
+# full fresh start (wipe all memory)
+rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
+
+# load TruthfulQA correct answers (100 entries)
+python scripts/load_truthfulqa.py
+
+# load wrong answers (50 entries — contradiction testing)
+python scripts/load_memories.py memory/wrong_dataset.py
+
+# load handcrafted test dataset (30 entries)
+python scripts/load_memories.py memory/test_dataset.py
+
+
+----------------------------------------------------------------
+MEMORY — INSPECT
+----------------------------------------------------------------
+
+# show full memory pool with trust scores
+python scripts/inspect_memory.py
+
+# check total memory count
+python -c "
+import os, sys
+os.environ.setdefault('OPENAI_API_KEY', 'dummy-key-not-used')
+sys.path.insert(0, '.')
+from memory.mem0_store import get_all_memories
+mems = get_all_memories()
+print(f'Total memories: {len(mems)}')
+"
+
+----------------------------------------------------------------
+HARDWARE NOTE
+----------------------------------------------------------------
+ 
+The models (Alpha, Beta, Gamma) run via HuggingFace Transformers and
+will automatically use whatever hardware is available:
+ 
+  CUDA GPU   →  fast, recommended (~8 GB VRAM minimum)
+  Apple MPS  →  works on Apple Silicon (M1/M2/M3)
+  CPU only   →  works but slow — expect longer inference times
+ 
+To explicitly target a specific GPU (if you have multiple):
+  CUDA_VISIBLE_DEVICES=0 python <script>.py   # GPU 0
+  CUDA_VISIBLE_DEVICES=1 python <script>.py   # GPU 1
+ 
+To force CPU only:
+  CUDA_VISIBLE_DEVICES="" python <script>.py
+
+
+
+----------------------------------------------------------------
+TESTS
+----------------------------------------------------------------
+
+# retrieval quality — no GPU needed
+python tests/test_retrieval.py
+
+# contradiction detection
+CUDA_VISIBLE_DEVICES=0 python tests/test_contradiction.py
+
+# full end-to-end pipeline
+CUDA_VISIBLE_DEVICES=0 python tests/test_pipeline.py
+
+# memory vs own reasoning in final answer
+CUDA_VISIBLE_DEVICES=0 python tests/test_final_context.py
+
+# edge cases
+CUDA_VISIBLE_DEVICES=0 python tests/test_edge_cases.py
+
+
+----------------------------------------------------------------
+GIT — COMMON WORKFLOWS
+----------------------------------------------------------------
+
+# check status
+git status
+
+# stage all changes
+git add .
+
+# commit
+git commit -m "your message here"
+
+# push to GitHub
+git push
+
+# pull latest changes
+git pull origin main
+
+
+
+----------------------------------------------------------------
+EXAMPLE DEMO — (FOR TEST DATASET)
+----------------------------------------------------------------
+
+# step 1 — fresh start
+rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
+
+# step 2 — load test dataset (30 entries)
+python scripts/load_memories.py memory/test_dataset.py
+
+# step 3 — inspect memory (all 30 entries at score 0.5)
+python scripts/inspect_memory.py
+
+# step 4 — run demo, type query when prompted
+CUDA_VISIBLE_DEVICES=1 python tests/demo_interactive.py
+
+# step 5 — inspect memory again (wrong entries deleted)
+python scripts/inspect_memory.py
+
+# step 6 — run again for next query
+CUDA_VISIBLE_DEVICES=1 python tests/demo_interactive.py
+
+Suggested queries:
+  "What is the speed of light?"
+  "What is the capital of France?"
+  "How many chambers does the human heart have?"
+  "What is the square root of 144?"
+
+
+----------------------------------------------------------------
+EXAMPLE DEMO — (FOR TRUTHFULQA + WRONG DATASET)
+----------------------------------------------------------------
+
+# step 1 — fresh start
+rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
+
+# step 2 — load correct answers (100 entries from TruthfulQA)
+python scripts/load_truthfulqa.py
+
+# step 3 — inspect memory (100 entries, all at score 0.5)
+python scripts/inspect_memory.py
+
+# step 4 — load wrong answers (50 entries — directly contradicts TruthfulQA)
+python scripts/load_memories.py memory/wrong_dataset.py
+
+# step 5 — inspect memory (now ~150 entries, correct + wrong mixed)
+python scripts/inspect_memory.py
+
+# step 6 — run demo, type query when prompted
+CUDA_VISIBLE_DEVICES=1 python tests/demo_interactive.py
+
+# step 7 — inspect memory again (wrong entries deleted, pool cleaned)
+python scripts/inspect_memory.py
+
+# step 8 — run again for next query
+CUDA_VISIBLE_DEVICES=1 python tests/demo_interactive.py
+
+Suggested queries:
+  "Why do veins appear blue?"
+  "What percentage of the brain does a human use?"
+  "Can you get a cold from being cold?"

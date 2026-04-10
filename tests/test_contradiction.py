@@ -1,7 +1,7 @@
 """
 test_contradiction.py
 Pure pipeline test — no logic written here.
-Run: CUDA_VISIBLE_DEVICES=3 python test_contradiction.py
+Run: python test_contradiction.py
 """
 
 import os, sys, warnings, logging

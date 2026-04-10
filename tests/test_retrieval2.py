@@ -1,7 +1,7 @@
 """
 test_retrieval2.py
 Tests the full flow: reason first → retrieve → show contradictions
-Run: CUDA_VISIBLE_DEVICES=3 python test_retrieval2.py
+Run: python test_retrieval2.py
 """
 
 import os, sys, warnings, logging

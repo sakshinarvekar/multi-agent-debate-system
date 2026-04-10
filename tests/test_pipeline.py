@@ -1,7 +1,7 @@
 """
 test_pipeline.py
 Full end-to-end pipeline test — no logic implemented here.
-Run: CUDA_VISIBLE_DEVICES=3 python test_pipeline.py
+Run: python test_pipeline.py
 """
 
 import os, sys, warnings, logging

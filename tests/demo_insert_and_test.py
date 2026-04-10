@@ -1,10 +1,19 @@
-"""week4_test.py — Bayesian Memory Trust Scoring Demo"""
+"""
+demo_insert_and_test.py
+Bayesian Memory Trust Scoring Demo — starts from empty memory,
+injects a wrong answer, runs full pipeline to detect and delete it.
 
-import os, warnings, logging
+Run: python tests/demo_insert_and_test.py
+"""
+
+import os, sys,  warnings, logging
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 os.environ["TRANSFORMERS_VERBOSITY"] = "error"
 warnings.filterwarnings("ignore")
 logging.disable(logging.CRITICAL)
+os.makedirs("chroma_db", exist_ok=True)
+os.environ.setdefault("OPENAI_API_KEY", "dummy-key-not-used")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agents.specialized_agents import AlphaAgent, BetaAgent, GammaAgent
 from memory.mem0_store import save, get_all_memories
@@ -31,7 +40,7 @@ def print_all_memory_scores(label: str):
 
 
 def run_demo():
-    box("WEEK 4 — BAYESIAN MEMORY TRUST SCORING DEMO")
+    box("BAYESIAN MEMORY TRUST SCORING DEMO")
     print("""
   Agents : Alpha (Qwen) · Beta (Phi-2) · Gamma (DeepSeek)
   Memory : Mem0 + ChromaDB + Bayesian trust scores
@@ -56,14 +65,14 @@ def run_demo():
     print(f"\n  Q : {q1}\n")
     r1 = alpha.run(q1, other_agents=None)
 
-    print("  [ TODO1 ]  Alpha reasons first")
+    print("  [ Step1 ]  Alpha reasons first")
     line()
     print(f"  r_q : {r1['initial_reasoning']}")
     print(f"  a_q : {r1['initial_answer'][:80]}")
-    print("\n  [ TODO2 ]  Retrieve memory")
+    print("\n  [ Step2 ]  Retrieve memory")
     line()
     print("  m_q : empty — no memories yet")
-    print("\n  [ TODO3 ]  Contradiction check")
+    print("\n  [ Step3 ]  Contradiction check")
     line()
     print("  u = 0 — nothing to check")
     print("\n  [ FINAL ]")
@@ -91,18 +100,18 @@ def run_demo():
     print(f"\n  Q : {q2}\n")
     r2 = alpha.run(q2, other_agents=[beta, gamma])
 
-    print("  [ TODO1 ]  Alpha reasons first")
+    print("  [ STEP1 ]  Alpha reasons first")
     line()
     print(f"  r_q : {r2['initial_reasoning']}")
     print(f"  a_q : {r2['initial_answer'][:80]}")
 
-    print("\n  [ TODO2 ]  Retrieve memory using ( q + r_q + a_q )")
+    print("\n  [ STEP2 ]  Retrieve memory using ( q + r_q + a_q )")
     line()
     scores = r2.get("contradiction_scores", [])
     print(f"  contradiction scores : {scores}")
     print(f"  u = {r2['uncertainty']} contradiction(s) detected")
 
-    print("\n  [ TODO3 ]  Contradiction check")
+    print("\n  [ STEP3 ]  Contradiction check")
     line()
     u = r2["uncertainty"]
     print(f"  u = {u} → {'PROBING triggered ⚠' if u > 0 else 'no contradiction'}")

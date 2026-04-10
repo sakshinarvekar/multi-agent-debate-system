@@ -1,7 +1,7 @@
 """
-test.py
+test_retrieval.py
 Pick a query, see what comes back from memory.
-Run: python test.py
+Run: python test_retrieval.py
 """
 
 import os, sys
@@ -19,7 +19,7 @@ for m in TEST_MEMORIES:
 print(f"{len(TEST_MEMORIES)} memories loaded.\n")
 
 # ── Query ─────────────────────────────────────────────────────
-query = "Why are veins blue in color?"
+query = "Human heart has 5 chambers, right?"
 
 print(f"Query : {query}")
 print("─" * 60)

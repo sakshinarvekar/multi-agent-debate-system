@@ -55,9 +55,20 @@ save(q, r*, a*) to memory pool
 
 ## Agents
 
-Alpha  -  `Qwen2.5-1.5B-Instruct` 
-Beta -  `microsoft/phi-2` 
-Gamma - `DeepSeek-R1-Distill-Qwen-1.5B`
+| Agent | Model |
+|---|---|
+| Alpha | `Qwen2.5-1.5B-Instruct` |
+| Beta | `microsoft/phi-2` |
+| Gamma | `DeepSeek-R1-Distill-Qwen-1.5B` |
+
+---
+## Datasets
+
+| Dataset | Entries | Agent | Description |
+|---|---|---|---|
+| TruthfulQA | 100 | `agent_alpha` | Correct answers loaded via HuggingFace |
+| wrong_dataset | 50 | `bad_agent` | Handcrafted wrong answers — contradicts TruthfulQA |
+| test_dataset | 30 | mixed | Handcrafted — correct + wrong answers for quick demo |
 
 ---
 
@@ -100,19 +111,24 @@ multi-agent-debate-system/
 │   └── wrong_dataset.py           # 50 wrong answers for contradiction testing
 │
 ├── scripts/
+│   ├── __init__.py
 │   ├── load_truthfulqa.py         # loads TruthfulQA correct answers
 │   ├── load_memories.py           # loads any dataset into ChromaDB
 │   └── inspect_memory.py          # shows memory pool with scores
 │
 ├── tests/
+│   ├── __init__.py
+│   ├── demo_interactive.py        # interactive single-query demo
+│   ├── demo_insert_and_test.py    # controlled injection + Bayesian scoring demo
 │   ├── test_retrieval.py          # retrieval quality
+│   ├── test_retrieval2.py         # retrieval quality v2
 │   ├── test_contradiction.py      # contradiction detection
 │   ├── test_pipeline.py           # full end-to-end pipeline
 │   └── test_final_context.py      # memory vs own reasoning
-│   
 │
+├── router.py                      # routes query through all agents sequentially
 ├── requirements.txt
-├── COMMANDS.txt
+├── commands.txt
 ├── .gitignore
 └── README.md
 ```
@@ -142,7 +158,7 @@ pip install -r requirements.txt
 pip install datasets
 ```
 
-> **Requirements:** CUDA-enabled GPU · Python 3.10 · ~8 GB GPU memory minimum
+> **Hardware:** Auto-detects CUDA GPU, Apple MPS, or CPU. No manual configuration needed.
 
 ---
 
@@ -155,14 +171,13 @@ rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
 # load correct answers
 python scripts/load_truthfulqa.py
 
-# load wrong answers (for contradiction testing)
+# load wrong answers (for contradiction testing wrt truthfulqa dataset)
 python scripts/load_memories.py memory/wrong_dataset.py
 
 # inspect memory pool
 python scripts/inspect_memory.py
 
-# run demo
-CUDA_VISIBLE_DEVICES=0 python week4_test.py
+
 ```
 
 ---
@@ -174,16 +189,14 @@ CUDA_VISIBLE_DEVICES=0 python week4_test.py
 python tests/test_retrieval.py
 
 # contradiction detection
-CUDA_VISIBLE_DEVICES=0 python tests/test_contradiction.py
+python tests/test_contradiction.py
 
 # full pipeline
-CUDA_VISIBLE_DEVICES=0 python tests/test_pipeline.py
+python tests/test_pipeline.py
 
 # memory vs own reasoning
-CUDA_VISIBLE_DEVICES=0 python tests/test_final_context.py
+python tests/test_final_context.py
 
-# edge cases
-CUDA_VISIBLE_DEVICES=0 python tests/test_edge_cases.py
 ```
 
 ---

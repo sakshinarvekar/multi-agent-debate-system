@@ -1,7 +1,7 @@
 """
 test_final_context.py
 Checks whether final answer uses memory context or own reasoning.
-Run: CUDA_VISIBLE_DEVICES=3 python test_final_context.py
+Run: python test_final_context.py
 """
 
 import os, sys, warnings, logging

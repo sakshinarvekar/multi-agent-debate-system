@@ -8,3 +8,5 @@ memory/memory_trust_scores.json
 memory_snapshot.json
 *.egg-info/
 .DS_Store
+memory_snapshot.json
+memory/memory_trust_scores.json
