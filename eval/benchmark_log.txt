@@ -1,0 +1,781 @@
+nohup: ignoring input
+===============================
+  FULL BENCHMARK — START
+===============================
+--- TriviaQA: no_memory ---
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+
+══════════════════════════════════════════════════════════════
+  Setup: no_memory | Dataset: triviaqa | N: 50
+══════════════════════════════════════════════════════════════
+
+  Loading agents...
+  Agents ready.
+
+  Loading triviaqa...
+  50 cases loaded.
+
+══════════════════════════════════════════════════════════════
+  Running 50 cases...
+══════════════════════════════════════════════════════════════
+  [1/50] Which Lloyd Webber musical premiered in the US on 10th Decem
+    time=4.77s  avg so far=4.77s
+  [2/50] Who was the next British Prime Minister after Arthur Balfour
+    time=3.94s  avg so far=4.36s
+  [3/50] Who had a 70s No 1 hit with Kiss You All Over?
+    time=4.31s  avg so far=4.34s
+  [4/50] What claimed the life of singer Kathleen Ferrier?
+    time=3.82s  avg so far=4.21s
+  [5/50] Which actress was voted Miss Greenwich Village in 1942?
+    time=4.29s  avg so far=4.23s
+  [6/50] What was the name of Michael Jackson's autobiography written
+    time=4.09s  avg so far=4.2s
+  [7/50] Which volcano in Tanzania is the highest mountain in Africa?
+    time=4.36s  avg so far=4.23s
+  [8/50] The flag of Libya is a plain rectangle of which color?
+    time=4.36s  avg so far=4.24s
+  [9/50] Of which African country is Niamey the capital?
+    time=4.08s  avg so far=4.22s
+  [10/50] Which musical featured the song The Street Where You Live?
+    time=4.37s  avg so far=4.24s
+  [11/50] "Who was the target of the failed ""Bomb Plot"" of 1944?"
+    time=4.34s  avg so far=4.25s
+  [12/50] Who had an 80s No 1 hit with Hold On To The Nights?
+    time=4.78s  avg so far=4.29s
+  [13/50] Who directed the classic 30s western Stagecoach?
+    time=4.72s  avg so far=4.33s
+  [14/50] Dave Gilmore and Roger Waters were in which rock group?
+    time=5.25s  avg so far=4.39s
+  [15/50] Which highway was Revisited in a classic 60s album by Bob Dy
+    time=4.38s  avg so far=4.39s
+  [16/50] Which was the only eastern bloc country to participate in th
+    time=4.12s  avg so far=4.37s
+  [17/50] Which 90s sci fi series with James Belushi was based on Bruc
+    time=5.17s  avg so far=4.42s
+  [18/50] If I Were A Rich Man Was a big hit from which stage show?
+    time=4.41s  avg so far=4.42s
+  [19/50] Men Against the Sea and Pitcairn's Island were two sequels t
+    time=4.42s  avg so far=4.42s
+  [20/50] What was Truman Capote's last name before he was adopted by 
+    time=4.76s  avg so far=4.44s
+  [21/50] In Lewis Carroll's poem The Hunting of the Snark, what did t
+    time=3.85s  avg so far=4.41s
+  [22/50] What Michelle Pfeiffer movie got a boost from the Coolio son
+    time=5.09s  avg so far=4.44s
+  [23/50] What was President Gerald Ford's middle name?
+    time=4.43s  avg so far=4.44s
+  [24/50] Art Garfunkel trained for which profession although he didn'
+    time=4.25s  avg so far=4.43s
+  [25/50] Who was the last inmate of Spandau jail in Berlin?
+    time=4.27s  avg so far=4.43s
+  [26/50] In the 80s who wrote the novel Empire of The Sun?
+    time=4.82s  avg so far=4.44s
+  [27/50] Kagoshima international airport is in which country?
+    time=4.98s  avg so far=4.46s
+  [28/50] In which sport could the Pacers take on the Pistons?
+    time=4.54s  avg so far=4.46s
+  [29/50] Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was int
+    time=4.55s  avg so far=4.47s
+  [30/50] Where in Canada is the Lion's Gate bridge?
+    time=4.43s  avg so far=4.46s
+  [31/50] What was Walter Matthau's first movie?
+    time=4.79s  avg so far=4.48s
+  [32/50] Where in England was actor Nigel Hawthorne born?
+    time=3.20s  avg so far=4.44s
+  [33/50] In Greek mythology, who were Arges, Brontes and Steropes?
+    time=3.23s  avg so far=4.4s
+  [34/50] Which musician founded the Red Hot Peppers?
+    time=2.62s  avg so far=4.35s
+  [35/50] Where did the Shinning Path terrorists operate?
+    time=2.60s  avg so far=4.3s
+  [36/50] How old was Jimi Hendrix when he died?
+    time=2.52s  avg so far=4.25s
+  [37/50] Which Brit broke the land speed record in 1990 in Thrust 2?
+    time=2.53s  avg so far=4.2s
+  [38/50] In which state was Gene Vincent born?
+    time=2.55s  avg so far=4.16s
+  [39/50] How was the European Recovery Program in the 1940s more comm
+    time=2.51s  avg so far=4.12s
+  [40/50] Brandon Lee died during the making of which movie?
+    time=2.51s  avg so far=4.08s
+  [41/50] Who had a 70s No 1 hit with Let's Do It Again?
+    time=2.51s  avg so far=4.04s
+  [42/50] Who had a Too Legit To Quit Tour?
+    time=2.49s  avg so far=4.0s
+  [43/50] Which country does the airline TAAG come from?
+    time=2.53s  avg so far=3.97s
+  [44/50] Which US No 1 single came from Diana Ross's platinum album D
+    time=2.83s  avg so far=3.94s
+  [45/50] River Phoenix died during the making of which movie?
+    time=2.83s  avg so far=3.92s
+  [46/50] Which artist David was born in Bradford UK?
+    time=2.68s  avg so far=3.89s
+  [47/50] Richard Daley was mayor of which city for 21 years?
+    time=2.71s  avg so far=3.86s
+  [48/50] "In which movie did Garbo say, ""I want to be alone""."
+    time=2.58s  avg so far=3.84s
+  [49/50] What is Osbert Lancaster best known for producing?
+    time=2.81s  avg so far=3.82s
+  [50/50] Who was the defending champion when Martina Navratilova firs
+    time=2.77s  avg so far=3.79s
+
+══════════════════════════════════════════════════════════════
+  DONE — no_memory on triviaqa
+══════════════════════════════════════════════════════════════
+  avg_time : 3.795s
+  saved    : eval/results_triviaqa_no_memory.json
+
+--- TriviaQA: baseline ---
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+
+══════════════════════════════════════════════════════════════
+  Setup: baseline | Dataset: triviaqa | N: 50
+══════════════════════════════════════════════════════════════
+
+  Loading agents...
+  Agents ready.
+
+  Loading triviaqa...
+  50 cases loaded.
+
+══════════════════════════════════════════════════════════════
+  Running 50 cases...
+══════════════════════════════════════════════════════════════
+  [1/50] Which Lloyd Webber musical premiered in the US on 10th Decem
+    time=5.97s  avg so far=5.97s
+  [2/50] Who was the next British Prime Minister after Arthur Balfour
+    time=6.23s  avg so far=6.1s
+  [3/50] Who had a 70s No 1 hit with Kiss You All Over?
+    time=5.42s  avg so far=5.87s
+  [4/50] What claimed the life of singer Kathleen Ferrier?
+    time=5.14s  avg so far=5.69s
+  [5/50] Which actress was voted Miss Greenwich Village in 1942?
+    time=5.36s  avg so far=5.62s
+  [6/50] What was the name of Michael Jackson's autobiography written
+    time=5.90s  avg so far=5.67s
+  [7/50] Which volcano in Tanzania is the highest mountain in Africa?
+    time=6.25s  avg so far=5.75s
+  [8/50] The flag of Libya is a plain rectangle of which color?
+    time=5.24s  avg so far=5.69s
+  [9/50] Of which African country is Niamey the capital?
+    time=5.39s  avg so far=5.66s
+  [10/50] Which musical featured the song The Street Where You Live?
+    time=5.61s  avg so far=5.65s
+  [11/50] "Who was the target of the failed ""Bomb Plot"" of 1944?"
+    time=5.84s  avg so far=5.67s
+  [12/50] Who had an 80s No 1 hit with Hold On To The Nights?
+    time=5.92s  avg so far=5.69s
+  [13/50] Who directed the classic 30s western Stagecoach?
+    time=5.81s  avg so far=5.7s
+  [14/50] Dave Gilmore and Roger Waters were in which rock group?
+    time=5.57s  avg so far=5.69s
+  [15/50] Which highway was Revisited in a classic 60s album by Bob Dy
+    time=5.47s  avg so far=5.67s
+  [16/50] Which was the only eastern bloc country to participate in th
+    time=5.96s  avg so far=5.69s
+  [17/50] Which 90s sci fi series with James Belushi was based on Bruc
+    time=5.57s  avg so far=5.69s
+  [18/50] If I Were A Rich Man Was a big hit from which stage show?
+    time=5.60s  avg so far=5.68s
+  [19/50] Men Against the Sea and Pitcairn's Island were two sequels t
+    time=5.60s  avg so far=5.68s
+  [20/50] What was Truman Capote's last name before he was adopted by 
+    time=5.86s  avg so far=5.69s
+  [21/50] In Lewis Carroll's poem The Hunting of the Snark, what did t
+    time=5.76s  avg so far=5.69s
+  [22/50] What Michelle Pfeiffer movie got a boost from the Coolio son
+    time=5.97s  avg so far=5.7s
+  [23/50] What was President Gerald Ford's middle name?
+    time=6.00s  avg so far=5.71s
+  [24/50] Art Garfunkel trained for which profession although he didn'
+    time=5.39s  avg so far=5.7s
+  [25/50] Who was the last inmate of Spandau jail in Berlin?
+    time=5.67s  avg so far=5.7s
+  [26/50] In the 80s who wrote the novel Empire of The Sun?
+    time=5.69s  avg so far=5.7s
+  [27/50] Kagoshima international airport is in which country?
+    time=5.45s  avg so far=5.69s
+  [28/50] In which sport could the Pacers take on the Pistons?
+    time=5.49s  avg so far=5.68s
+  [29/50] Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was int
+    time=5.43s  avg so far=5.67s
+  [30/50] Where in Canada is the Lion's Gate bridge?
+    time=5.29s  avg so far=5.66s
+  [31/50] What was Walter Matthau's first movie?
+    time=5.79s  avg so far=5.67s
+  [32/50] Where in England was actor Nigel Hawthorne born?
+    time=5.80s  avg so far=5.67s
+  [33/50] In Greek mythology, who were Arges, Brontes and Steropes?
+    time=5.98s  avg so far=5.68s
+  [34/50] Which musician founded the Red Hot Peppers?
+    time=5.73s  avg so far=5.68s
+  [35/50] Where did the Shinning Path terrorists operate?
+    time=6.12s  avg so far=5.69s
+  [36/50] How old was Jimi Hendrix when he died?
+    time=6.14s  avg so far=5.71s
+  [37/50] Which Brit broke the land speed record in 1990 in Thrust 2?
+    time=6.57s  avg so far=5.73s
+  [38/50] In which state was Gene Vincent born?
+    time=6.26s  avg so far=5.74s
+  [39/50] How was the European Recovery Program in the 1940s more comm
+    time=6.31s  avg so far=5.76s
+  [40/50] Brandon Lee died during the making of which movie?
+    time=5.99s  avg so far=5.76s
+  [41/50] Who had a 70s No 1 hit with Let's Do It Again?
+    time=6.25s  avg so far=5.78s
+  [42/50] Who had a Too Legit To Quit Tour?
+    time=6.69s  avg so far=5.8s
+  [43/50] Which country does the airline TAAG come from?
+    time=5.89s  avg so far=5.8s
+  [44/50] Which US No 1 single came from Diana Ross's platinum album D
+    time=6.39s  avg so far=5.81s
+  [45/50] River Phoenix died during the making of which movie?
+    time=6.61s  avg so far=5.83s
+  [46/50] Which artist David was born in Bradford UK?
+    time=6.13s  avg so far=5.84s
+  [47/50] Richard Daley was mayor of which city for 21 years?
+    time=6.18s  avg so far=5.84s
+  [48/50] "In which movie did Garbo say, ""I want to be alone""."
+    time=6.14s  avg so far=5.85s
+  [49/50] What is Osbert Lancaster best known for producing?
+    time=6.11s  avg so far=5.86s
+  [50/50] Who was the defending champion when Martina Navratilova firs
+    time=4.94s  avg so far=5.84s
+
+══════════════════════════════════════════════════════════════
+  DONE — baseline on triviaqa
+══════════════════════════════════════════════════════════════
+  avg_time : 5.838s
+  saved    : eval/results_triviaqa_baseline.json
+
+--- TriviaQA: full_pma ---
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+
+══════════════════════════════════════════════════════════════
+  Setup: full_pma | Dataset: triviaqa | N: 50
+══════════════════════════════════════════════════════════════
+
+  Loading agents...
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.13it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.93it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.74it/s]
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+  Agents ready.
+
+  Loading triviaqa...
+  50 cases loaded.
+
+══════════════════════════════════════════════════════════════
+  Running 50 cases...
+══════════════════════════════════════════════════════════════
+  [1/50] Which Lloyd Webber musical premiered in the US on 10th Decem
+    time=6.05s  avg so far=6.05s
+  [2/50] Who was the next British Prime Minister after Arthur Balfour
+    time=6.31s  avg so far=6.18s
+  [3/50] Who had a 70s No 1 hit with Kiss You All Over?
+    time=5.75s  avg so far=6.03s
+  [4/50] What claimed the life of singer Kathleen Ferrier?
+    time=5.82s  avg so far=5.98s
+  [5/50] Which actress was voted Miss Greenwich Village in 1942?
+    time=5.95s  avg so far=5.98s
+  [6/50] What was the name of Michael Jackson's autobiography written
+    time=5.76s  avg so far=5.94s
+  [7/50] Which volcano in Tanzania is the highest mountain in Africa?
+    time=5.56s  avg so far=5.89s
+  [8/50] The flag of Libya is a plain rectangle of which color?
+    time=5.63s  avg so far=5.85s
+  [9/50] Of which African country is Niamey the capital?
+    time=5.73s  avg so far=5.84s
+  [10/50] Which musical featured the song The Street Where You Live?
+    time=5.77s  avg so far=5.83s
+  [11/50] "Who was the target of the failed ""Bomb Plot"" of 1944?"
+    time=5.78s  avg so far=5.83s
+  [12/50] Who had an 80s No 1 hit with Hold On To The Nights?
+    time=5.58s  avg so far=5.81s
+  [13/50] Who directed the classic 30s western Stagecoach?
+    time=5.88s  avg so far=5.81s
+  [14/50] Dave Gilmore and Roger Waters were in which rock group?
+    time=4.39s  avg so far=5.71s
+  [15/50] Which highway was Revisited in a classic 60s album by Bob Dy
+    time=5.90s  avg so far=5.72s
+  [16/50] Which was the only eastern bloc country to participate in th
+    time=5.59s  avg so far=5.72s
+  [17/50] Which 90s sci fi series with James Belushi was based on Bruc
+    time=5.62s  avg so far=5.71s
+  [18/50] If I Were A Rich Man Was a big hit from which stage show?
+    time=5.81s  avg so far=5.72s
+  [19/50] Men Against the Sea and Pitcairn's Island were two sequels t
+    time=5.97s  avg so far=5.73s
+  [20/50] What was Truman Capote's last name before he was adopted by 
+    time=5.96s  avg so far=5.74s
+  [21/50] In Lewis Carroll's poem The Hunting of the Snark, what did t
+    time=6.14s  avg so far=5.76s
+  [22/50] What Michelle Pfeiffer movie got a boost from the Coolio son
+    time=6.77s  avg so far=5.81s
+  [23/50] What was President Gerald Ford's middle name?
+    time=5.83s  avg so far=5.81s
+  [24/50] Art Garfunkel trained for which profession although he didn'
+    time=5.73s  avg so far=5.8s
+  [25/50] Who was the last inmate of Spandau jail in Berlin?
+    time=6.09s  avg so far=5.81s
+  [26/50] In the 80s who wrote the novel Empire of The Sun?
+    time=5.89s  avg so far=5.82s
+  [27/50] Kagoshima international airport is in which country?
+    time=5.81s  avg so far=5.82s
+  [28/50] In which sport could the Pacers take on the Pistons?
+    time=6.04s  avg so far=5.83s
+  [29/50] Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was int
+    time=6.51s  avg so far=5.85s
+  [30/50] Where in Canada is the Lion's Gate bridge?
+    time=6.03s  avg so far=5.86s
+  [31/50] What was Walter Matthau's first movie?
+    time=6.49s  avg so far=5.88s
+  [32/50] Where in England was actor Nigel Hawthorne born?
+    time=6.43s  avg so far=5.89s
+  [33/50] In Greek mythology, who were Arges, Brontes and Steropes?
+    time=5.90s  avg so far=5.89s
+  [34/50] Which musician founded the Red Hot Peppers?
+    time=6.11s  avg so far=5.9s
+  [35/50] Where did the Shinning Path terrorists operate?
+    time=5.82s  avg so far=5.9s
+  [36/50] How old was Jimi Hendrix when he died?
+    time=5.90s  avg so far=5.9s
+  [37/50] Which Brit broke the land speed record in 1990 in Thrust 2?
+    time=5.82s  avg so far=5.9s
+  [38/50] In which state was Gene Vincent born?
+    time=5.86s  avg so far=5.89s
+  [39/50] How was the European Recovery Program in the 1940s more comm
+    time=6.06s  avg so far=5.9s
+  [40/50] Brandon Lee died during the making of which movie?
+    time=5.67s  avg so far=5.89s
+  [41/50] Who had a 70s No 1 hit with Let's Do It Again?
+    time=5.90s  avg so far=5.89s
+  [42/50] Who had a Too Legit To Quit Tour?
+    time=5.41s  avg so far=5.88s
+  [43/50] Which country does the airline TAAG come from?
+    time=5.97s  avg so far=5.88s
+  [44/50] Which US No 1 single came from Diana Ross's platinum album D
+    time=6.23s  avg so far=5.89s
+  [45/50] River Phoenix died during the making of which movie?
+    time=6.40s  avg so far=5.9s
+  [46/50] Which artist David was born in Bradford UK?
+    time=6.12s  avg so far=5.91s
+  [47/50] Richard Daley was mayor of which city for 21 years?
+    time=6.20s  avg so far=5.91s
+  [48/50] "In which movie did Garbo say, ""I want to be alone""."
+    time=5.89s  avg so far=5.91s
+  [49/50] What is Osbert Lancaster best known for producing?
+    time=6.29s  avg so far=5.92s
+  [50/50] Who was the defending champion when Martina Navratilova firs
+    time=6.29s  avg so far=5.93s
+
+══════════════════════════════════════════════════════════════
+  DONE — full_pma on triviaqa
+══════════════════════════════════════════════════════════════
+  avg_time : 5.929s
+  saved    : eval/results_triviaqa_full_pma.json
+
+--- FEVER: no_memory ---
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+
+══════════════════════════════════════════════════════════════
+  Setup: no_memory | Dataset: fever | N: 50
+══════════════════════════════════════════════════════════════
+
+  Loading agents...
+  Agents ready.
+
+  Loading fever...
+  50 cases loaded.
+
+══════════════════════════════════════════════════════════════
+  Running 50 cases...
+══════════════════════════════════════════════════════════════
+  [1/50] Saturn is the ninth planet from the Sun.
+    time=3.09s  avg so far=3.09s
+  [2/50] Stephen Hillenburg developed an interest in art.
+    time=1.87s  avg so far=2.48s
+  [3/50] Melancholia was directed by a screenwriter.
+    time=2.58s  avg so far=2.51s
+  [4/50] Fist of Legend is a remake of a film directed by John Woo.
+    time=2.52s  avg so far=2.51s
+  [5/50] In fall of 2013 Brian Michael Bendis began teaching at the U
+    time=2.62s  avg so far=2.54s
+  [6/50] Touchscreens are only used in gaming computers.
+    time=3.13s  avg so far=2.63s
+  [7/50] Lizzy Caplan is incapable of appearing in multiple televisio
+    time=2.83s  avg so far=2.66s
+  [8/50] Invasion literature was influential in Spain in shaping popu
+    time=2.70s  avg so far=2.67s
+  [9/50] To Pimp a Butterfly refused to sell any copies in America un
+    time=2.80s  avg so far=2.68s
+  [10/50] Glee.com is a website launched in the 2000s.
+    time=2.67s  avg so far=2.68s
+  [11/50] Keith Urban was released in 1999.
+    time=2.61s  avg so far=2.67s
+  [12/50] Larry the Cable Guy series finale aired on the the day of 29
+    time=2.62s  avg so far=2.67s
+  [13/50] The Indian Institute of Management Bangalore offers an execu
+    time=2.74s  avg so far=2.68s
+  [14/50] Frozen is a film from 2003.
+    time=2.59s  avg so far=2.67s
+  [15/50] The Hunchback of Notre Dame is notable only for its cast.
+    time=2.80s  avg so far=2.68s
+  [16/50] Jennifer Lopez has dated.
+    time=2.81s  avg so far=2.69s
+  [17/50] Papua was formerly called a dead body.
+    time=2.70s  avg so far=2.69s
+  [18/50] The King and I is based on Anna and the King of Siam.
+    time=2.88s  avg so far=2.7s
+  [19/50] The United Nations Charter was drafted in 1946.
+    time=2.60s  avg so far=2.69s
+  [20/50] Thomas Jefferson did not work with James Madison.
+    time=2.89s  avg so far=2.7s
+  [21/50] The Colosseum is in ruin.
+    time=2.35s  avg so far=2.69s
+  [22/50] Knocked Up grossed $259 million worldwide.
+    time=2.89s  avg so far=2.69s
+  [23/50] Damon Albarn has released something.
+    time=2.99s  avg so far=2.71s
+  [24/50] Liam Neeson has been nominated for an award.
+    time=2.82s  avg so far=2.71s
+  [25/50] Luis Fonsi is Puerto Rican.
+    time=2.72s  avg so far=2.71s
+  [26/50] Aaron Burr murdered one of the American Founding Fathers.
+    time=2.63s  avg so far=2.71s
+  [27/50] Jenna Jameson was photographed in the past.
+    time=2.88s  avg so far=2.72s
+  [28/50] Edgar Wright is a person.
+    time=2.33s  avg so far=2.7s
+  [29/50] Jackpot is exclusively a novel.
+    time=2.40s  avg so far=2.69s
+  [30/50] Lizzy Caplan is incapable of starring in television show lik
+    time=3.22s  avg so far=2.71s
+  [31/50] The Columbia River contains locks for shipping channels.
+    time=2.72s  avg so far=2.71s
+  [32/50] Villa Park hosted a football match in 2012.
+    time=2.88s  avg so far=2.71s
+  [33/50] Brick (film) was written by Michael Bay only.
+    time=2.79s  avg so far=2.72s
+  [34/50] Avenged Sevenfold is the fourth studio album of Avenged Seve
+    time=2.50s  avg so far=2.71s
+  [35/50] Colin Kaepernick is a football player.
+    time=2.83s  avg so far=2.71s
+  [36/50] The Good Wife produced a full 300 episode season.
+    time=3.24s  avg so far=2.73s
+  [37/50] Always features Audrey Hepburn.
+    time=2.80s  avg so far=2.73s
+  [38/50] One album by Eminem is Recovery.
+    time=2.91s  avg so far=2.74s
+  [39/50] Ed Wood is a film.
+    time=1.64s  avg so far=2.71s
+  [40/50] Star Trek: Discovery is directly connected to the Star Trek 
+    time=2.56s  avg so far=2.7s
+  [41/50] DNA is a work.
+    time=3.02s  avg so far=2.71s
+  [42/50] Despacito had a salsa as well as a pop version as of March 1
+    time=2.92s  avg so far=2.72s
+  [43/50] Hedda Gabler's world premiere took place at the Battle of Ha
+    time=2.82s  avg so far=2.72s
+  [44/50] The Hanford Site is unable to host the Pacific Northwest Nat
+    time=2.94s  avg so far=2.72s
+  [45/50] Cheese in the Trap (TV series) comes from India.
+    time=2.77s  avg so far=2.72s
+  [46/50] Miranda Otto has yet to begin her acting career.
+    time=2.84s  avg so far=2.73s
+  [47/50] Aparshakti Khurana directed Dangal.
+    time=2.87s  avg so far=2.73s
+  [48/50] The CONCACAF Champions League is organized for dead bodies.
+    time=2.51s  avg so far=2.73s
+  [49/50] Aaron Burr killed Alexander Hamilton in New Jersey.
+    time=3.27s  avg so far=2.74s
+  [50/50] Cadet Kelly was an original work.
+    time=2.90s  avg so far=2.74s
+
+══════════════════════════════════════════════════════════════
+  DONE — no_memory on fever
+══════════════════════════════════════════════════════════════
+  avg_time : 2.74s
+  saved    : eval/results_fever_no_memory.json
+
+--- FEVER: baseline ---
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+
+══════════════════════════════════════════════════════════════
+  Setup: baseline | Dataset: fever | N: 50
+══════════════════════════════════════════════════════════════
+
+  Loading agents...
+  Agents ready.
+
+  Loading fever...
+  50 cases loaded.
+
+══════════════════════════════════════════════════════════════
+  Running 50 cases...
+══════════════════════════════════════════════════════════════
+  [1/50] Saturn is the ninth planet from the Sun.
+    time=4.90s  avg so far=4.9s
+  [2/50] Stephen Hillenburg developed an interest in art.
+    time=6.07s  avg so far=5.49s
+  [3/50] Melancholia was directed by a screenwriter.
+    time=5.93s  avg so far=5.63s
+  [4/50] Fist of Legend is a remake of a film directed by John Woo.
+    time=5.65s  avg so far=5.64s
+  [5/50] In fall of 2013 Brian Michael Bendis began teaching at the U
+    time=5.27s  avg so far=5.56s
+  [6/50] Touchscreens are only used in gaming computers.
+    time=5.49s  avg so far=5.55s
+  [7/50] Lizzy Caplan is incapable of appearing in multiple televisio
+    time=5.70s  avg so far=5.57s
+  [8/50] Invasion literature was influential in Spain in shaping popu
+    time=5.50s  avg so far=5.56s
+  [9/50] To Pimp a Butterfly refused to sell any copies in America un
+    time=5.55s  avg so far=5.56s
+  [10/50] Glee.com is a website launched in the 2000s.
+    time=5.65s  avg so far=5.57s
+  [11/50] Keith Urban was released in 1999.
+    time=5.25s  avg so far=5.54s
+  [12/50] Larry the Cable Guy series finale aired on the the day of 29
+    time=5.85s  avg so far=5.57s
+  [13/50] The Indian Institute of Management Bangalore offers an execu
+    time=5.06s  avg so far=5.53s
+  [14/50] Frozen is a film from 2003.
+    time=6.12s  avg so far=5.57s
+  [15/50] The Hunchback of Notre Dame is notable only for its cast.
+    time=6.10s  avg so far=5.61s
+  [16/50] Jennifer Lopez has dated.
+    time=5.24s  avg so far=5.58s
+  [17/50] Papua was formerly called a dead body.
+    time=4.11s  avg so far=5.5s
+  [18/50] The King and I is based on Anna and the King of Siam.
+    time=5.66s  avg so far=5.51s
+  [19/50] The United Nations Charter was drafted in 1946.
+    time=5.35s  avg so far=5.5s
+  [20/50] Thomas Jefferson did not work with James Madison.
+    time=5.71s  avg so far=5.51s
+  [21/50] The Colosseum is in ruin.
+    time=5.91s  avg so far=5.53s
+  [22/50] Knocked Up grossed $259 million worldwide.
+    time=5.48s  avg so far=5.53s
+  [23/50] Damon Albarn has released something.
+    time=5.91s  avg so far=5.54s
+  [24/50] Liam Neeson has been nominated for an award.
+    time=5.73s  avg so far=5.55s
+  [25/50] Luis Fonsi is Puerto Rican.
+    time=5.20s  avg so far=5.54s
+  [26/50] Aaron Burr murdered one of the American Founding Fathers.
+    time=5.86s  avg so far=5.55s
+  [27/50] Jenna Jameson was photographed in the past.
+    time=6.79s  avg so far=5.59s
+  [28/50] Edgar Wright is a person.
+    time=6.65s  avg so far=5.63s
+  [29/50] Jackpot is exclusively a novel.
+    time=5.24s  avg so far=5.62s
+  [30/50] Lizzy Caplan is incapable of starring in television show lik
+    time=5.63s  avg so far=5.62s
+  [31/50] The Columbia River contains locks for shipping channels.
+    time=6.09s  avg so far=5.63s
+  [32/50] Villa Park hosted a football match in 2012.
+    time=6.00s  avg so far=5.65s
+  [33/50] Brick (film) was written by Michael Bay only.
+    time=6.10s  avg so far=5.66s
+  [34/50] Avenged Sevenfold is the fourth studio album of Avenged Seve
+    time=6.04s  avg so far=5.67s
+  [35/50] Colin Kaepernick is a football player.
+    time=5.26s  avg so far=5.66s
+  [36/50] The Good Wife produced a full 300 episode season.
+    time=6.68s  avg so far=5.69s
+  [37/50] Always features Audrey Hepburn.
+    time=6.32s  avg so far=5.7s
+  [38/50] One album by Eminem is Recovery.
+    time=5.84s  avg so far=5.71s
+  [39/50] Ed Wood is a film.
+    time=6.07s  avg so far=5.72s
+  [40/50] Star Trek: Discovery is directly connected to the Star Trek 
+    time=5.68s  avg so far=5.72s
+  [41/50] DNA is a work.
+    time=6.22s  avg so far=5.73s
+  [42/50] Despacito had a salsa as well as a pop version as of March 1
+    time=6.16s  avg so far=5.74s
+  [43/50] Hedda Gabler's world premiere took place at the Battle of Ha
+    time=6.42s  avg so far=5.75s
+  [44/50] The Hanford Site is unable to host the Pacific Northwest Nat
+    time=5.86s  avg so far=5.76s
+  [45/50] Cheese in the Trap (TV series) comes from India.
+    time=6.27s  avg so far=5.77s
+  [46/50] Miranda Otto has yet to begin her acting career.
+    time=6.49s  avg so far=5.78s
+  [47/50] Aparshakti Khurana directed Dangal.
+    time=6.29s  avg so far=5.79s
+  [48/50] The CONCACAF Champions League is organized for dead bodies.
+    time=6.71s  avg so far=5.81s
+  [49/50] Aaron Burr killed Alexander Hamilton in New Jersey.
+    time=7.24s  avg so far=5.84s
+  [50/50] Cadet Kelly was an original work.
+    time=5.20s  avg so far=5.83s
+
+══════════════════════════════════════════════════════════════
+  DONE — baseline on fever
+══════════════════════════════════════════════════════════════
+  avg_time : 5.83s
+  saved    : eval/results_fever_baseline.json
+
+--- FEVER: full_pma ---
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+
+══════════════════════════════════════════════════════════════
+  Setup: full_pma | Dataset: fever | N: 50
+══════════════════════════════════════════════════════════════
+
+  Loading agents...
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.04it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.87it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.67it/s]
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+  Agents ready.
+
+  Loading fever...
+  50 cases loaded.
+
+══════════════════════════════════════════════════════════════
+  Running 50 cases...
+══════════════════════════════════════════════════════════════
+  [1/50] Saturn is the ninth planet from the Sun.
+    time=5.85s  avg so far=5.85s
+  [2/50] Stephen Hillenburg developed an interest in art.
+    time=6.72s  avg so far=6.28s
+  [3/50] Melancholia was directed by a screenwriter.
+    time=5.85s  avg so far=6.14s
+  [4/50] Fist of Legend is a remake of a film directed by John Woo.
+    time=5.21s  avg so far=5.91s
+  [5/50] In fall of 2013 Brian Michael Bendis began teaching at the U
+    time=5.75s  avg so far=5.87s
+  [6/50] Touchscreens are only used in gaming computers.
+    time=6.55s  avg so far=5.99s
+  [7/50] Lizzy Caplan is incapable of appearing in multiple televisio
+    time=6.32s  avg so far=6.04s
+  [8/50] Invasion literature was influential in Spain in shaping popu
+    time=6.44s  avg so far=6.09s
+  [9/50] To Pimp a Butterfly refused to sell any copies in America un
+    time=5.27s  avg so far=6.0s
+  [10/50] Glee.com is a website launched in the 2000s.
+    time=5.71s  avg so far=5.97s
+  [11/50] Keith Urban was released in 1999.
+    time=6.70s  avg so far=6.03s
+  [12/50] Larry the Cable Guy series finale aired on the the day of 29
+    time=6.43s  avg so far=6.07s
+  [13/50] The Indian Institute of Management Bangalore offers an execu
+    time=6.53s  avg so far=6.1s
+  [14/50] Frozen is a film from 2003.
+    time=6.91s  avg so far=6.16s
+  [15/50] The Hunchback of Notre Dame is notable only for its cast.
+    time=5.83s  avg so far=6.14s
+  [16/50] Jennifer Lopez has dated.
+    time=4.97s  avg so far=6.07s
+  [17/50] Papua was formerly called a dead body.
+    time=5.60s  avg so far=6.04s
+  [18/50] The King and I is based on Anna and the King of Siam.
+    time=5.71s  avg so far=6.02s
+  [19/50] The United Nations Charter was drafted in 1946.
+    time=5.09s  avg so far=5.97s
+  [20/50] Thomas Jefferson did not work with James Madison.
+    time=4.58s  avg so far=5.9s
+  [21/50] The Colosseum is in ruin.
+    time=6.06s  avg so far=5.91s
+  [22/50] Knocked Up grossed $259 million worldwide.
+    time=5.81s  avg so far=5.9s
+  [23/50] Damon Albarn has released something.
+    time=5.27s  avg so far=5.88s
+  [24/50] Liam Neeson has been nominated for an award.
+    time=5.40s  avg so far=5.86s
+  [25/50] Luis Fonsi is Puerto Rican.
+    time=6.14s  avg so far=5.87s
+  [26/50] Aaron Burr murdered one of the American Founding Fathers.
+    time=6.13s  avg so far=5.88s
+  [27/50] Jenna Jameson was photographed in the past.
+    time=4.35s  avg so far=5.82s
+  [28/50] Edgar Wright is a person.
+    time=5.51s  avg so far=5.81s
+  [29/50] Jackpot is exclusively a novel.
+    time=5.94s  avg so far=5.82s
+  [30/50] Lizzy Caplan is incapable of starring in television show lik
+    time=12.26s  avg so far=6.03s
+  [31/50] The Columbia River contains locks for shipping channels.
+    time=5.16s  avg so far=6.0s
+  [32/50] Villa Park hosted a football match in 2012.
+    time=5.60s  avg so far=5.99s
+  [33/50] Brick (film) was written by Michael Bay only.
+    time=6.11s  avg so far=5.99s
+  [34/50] Avenged Sevenfold is the fourth studio album of Avenged Seve
+    time=5.71s  avg so far=5.98s
+  [35/50] Colin Kaepernick is a football player.
+    time=4.20s  avg so far=5.93s
+  [36/50] The Good Wife produced a full 300 episode season.
+    time=5.72s  avg so far=5.93s
+  [37/50] Always features Audrey Hepburn.
+    time=6.06s  avg so far=5.93s
+  [38/50] One album by Eminem is Recovery.
+    time=5.90s  avg so far=5.93s
+  [39/50] Ed Wood is a film.
+    time=6.17s  avg so far=5.94s
+  [40/50] Star Trek: Discovery is directly connected to the Star Trek 
+    time=5.53s  avg so far=5.93s
+  [41/50] DNA is a work.
+    time=5.50s  avg so far=5.92s
+  [42/50] Despacito had a salsa as well as a pop version as of March 1
+    time=5.85s  avg so far=5.91s
+  [43/50] Hedda Gabler's world premiere took place at the Battle of Ha
+    time=5.86s  avg so far=5.91s
+  [44/50] The Hanford Site is unable to host the Pacific Northwest Nat
+    time=5.06s  avg so far=5.89s
+  [45/50] Cheese in the Trap (TV series) comes from India.
+    time=6.67s  avg so far=5.91s
+  [46/50] Miranda Otto has yet to begin her acting career.
+    time=6.18s  avg so far=5.92s
+  [47/50] Aparshakti Khurana directed Dangal.
+    time=6.01s  avg so far=5.92s
+  [48/50] The CONCACAF Champions League is organized for dead bodies.
+    time=5.83s  avg so far=5.92s
+  [49/50] Aaron Burr killed Alexander Hamilton in New Jersey.
+  [AGM] deleted memory 834aec77-ae44-4331-8327-ac4724 — score=0.030
+    time=12.98s  avg so far=6.06s
+  [50/50] Cadet Kelly was an original work.
+    time=5.27s  avg so far=6.05s
+
+══════════════════════════════════════════════════════════════
+  DONE — full_pma on fever
+══════════════════════════════════════════════════════════════
+  avg_time : 6.045s
+  saved    : eval/results_fever_full_pma.json
+
+--- Combining results ---
+
+══════════════════════════════════════════════════════════════
+  BENCHMARK RESULTS — Average Runtime per Query (seconds) | N=50 queries each
+══════════════════════════════════════════════════════════════
+
+  Dataset         No Memory     Baseline     Full PMA
+──────────────────────────────────────────────────────────────
+  triviaqa          3.795s      5.838s      5.929s
+  fever              2.74s       5.83s      6.045s
+──────────────────────────────────────────────────────────────
+===============================
+  FULL BENCHMARK — DONE
+===============================

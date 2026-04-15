@@ -68,7 +68,8 @@ class BaseAgent:
 
         return verdict, response
 
-    def run(self, query: str, other_agents: list = None) -> dict:
+    # def run(self, query: str, other_agents: list = None) -> dict:
+    def run(self, query: str, other_agents: list = None, audit: bool = True) -> dict:
 
         # ── TODO1 — reason first, before checking memory ──────
         prompt_initial = (
@@ -97,7 +98,8 @@ class BaseAgent:
         memory_posteriors     = {}
         deleted_memories      = []
 
-        if u > 0 and other_agents:
+        # if u > 0 and other_agents:
+        if audit and u > 0 and other_agents:
             uncertainty_triggered = True
 
             # ── PROBING ───────────────────────────────────────

@@ -72,21 +72,25 @@ To force CPU only:
 ----------------------------------------------------------------
 TESTS
 ----------------------------------------------------------------
+# to force CPU only replace python with CUDA_VISIBLE_DEVICES="" python
 
-# retrieval quality — no GPU needed
+# retrieval quality
 python tests/test_retrieval.py
 
 # contradiction detection
-CUDA_VISIBLE_DEVICES=0 python tests/test_contradiction.py
-
-# full end-to-end pipeline
-CUDA_VISIBLE_DEVICES=0 python tests/test_pipeline.py
+python tests/test_contradiction.py
 
 # memory vs own reasoning in final answer
-CUDA_VISIBLE_DEVICES=0 python tests/test_final_context.py
+python tests/test_final_context.py
 
-# edge cases
-CUDA_VISIBLE_DEVICES=0 python tests/test_edge_cases.py
+# full end-to-end pipeline
+python tests/test_pipeline.py
+
+# controlled injection demo — starts from empty memory
+python tests/demo_insert_and_test.py
+
+# interactive single-query demo — works with any loaded dataset
+python tests/demo_interactive.py
 
 
 ----------------------------------------------------------------
