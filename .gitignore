@@ -10,3 +10,5 @@ memory_snapshot.json
 .DS_Store
 memory_snapshot.json
 memory/memory_trust_scores.json
+eval/benchmark_log.txt
+eval/results_*.json

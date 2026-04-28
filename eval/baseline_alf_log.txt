@@ -1,0 +1,2655 @@
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+
+══════════════════════════════════════════════════════════════
+  DEBATE — BASELINE MEMORY | 5 Agents | ALFWorld
+══════════════════════════════════════════════════════════════
+
+  Loading agents...
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.03s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.64it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.49it/s]
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
+Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:02,  1.13s/it]
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.12s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:03<00:00,  1.07s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:03<00:00,  1.08s/it]
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.46it/s]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.50it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.50it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.49it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.49it/s]
+  Agents ready.
+Initializing AlfredTWEnv...
+
+  0%|          | 0/494 [00:00<?, ?it/s]
+ 90%|█████████ | 445/494 [00:00<00:00, 4447.68it/s]
+100%|██████████| 494/494 [00:00<00:00, 4394.89it/s]
+/home/sakshi/miniconda3/envs/debate/lib/python3.10/site-packages/chromadb/types.py:144: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+  return self.model_fields  # pydantic 2.x
+Overall we have 140 games in split=eval_in_distribution
+Evaluating with 50 games
+
+══════════════════════════════════════════════════════════════
+  TASK 1/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: clean some lettuce and put it in fridge.
+  Final agent  : agent_alpha
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to fridge 1', 'open fridge 1', 'close fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'open fridge 1', 'close fridge 1', 'go to cabinet 1', 'open cabinet 1', 'close cabinet 1']
+    success  : ✗
+    tokens   : 753
+    time     : 16.355s
+  Agent 2 (agent_gamma)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bed 1', 'examine bed 1', 'take book 1 from bed 1', 'go to diningtable 1', 'move book 1 to diningtable 1', 'go to drawer 1', 'examine drawer 1', 'open drawer 1', 'go to diningtable 1', 'examine diningtable 1', 'take creditcard 2 from diningtable 1', 'examine creditcard 2', 'examine creditcard 2', 'go to bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 761
+    time     : 15.135s
+  Agent 3 (agent_delta)
+    memories : 2
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to countertop 1', 'go to drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to countertop 1', 'take soapbottle 1 from countertop 1', 'examine soapbottle 1']
+    success  : ✗
+    tokens   : 762
+    time     : 19.072s
+  Agent 4 (agent_epsilon)
+    memories : 3
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to sinkbasin 1', 'go to countertop 1', 'take candle 2 from countertop 1', 'examine candle 2']
+    success  : ✗
+    tokens   : 757
+    time     : 18.934s
+  Agent 5 (agent_alpha)
+    memories : 4
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 2', 'open drawer 2', 'close drawer 2', 'open drawer 2', 'close drawer 2', 'examine drawer 2', 'open drawer 2', 'close drawer 2', 'examine drawer 2']
+    success  : ✗
+    tokens   : 750
+    time     : 15.007s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3783
+  end-to-end  : 84.503s
+
+══════════════════════════════════════════════════════════════
+  TASK 2/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a cool apple in garbagecan.
+  Final agent  : agent_beta
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 0
+    steps    : 15
+    actions  : ['look', 'go to garbagecan 1', 'go to desk 1', 'go to bed 1', 'examine bed 1', 'take book 1 from bed 1', 'examine bed 1', 'go to drawer 1', 'go to bed 1', 'move book 1 to bed 1', 'take pillow 1 from bed 1', 'go to drawer 1', 'examine pillow 1', 'go to bed 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 763
+    time     : 13.802s
+  Agent 2 (agent_delta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bed 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'go to bed 1', 'take book 1 from bed 1', 'examine bed 1', 'go to drawer 1', 'examine book 1', 'examine book 1', 'examine book 1', 'go to bed 1']
+    success  : ✗
+    tokens   : 764
+    time     : 18.909s
+  Agent 3 (agent_epsilon)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 750
+    time     : 23.636s
+  Agent 4 (agent_alpha)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 718
+    time     : 18.83s
+  Agent 5 (agent_beta)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 759
+    time     : 15.341s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3754
+  end-to-end  : 90.518s
+
+══════════════════════════════════════════════════════════════
+  TASK 3/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put two spatula in drawer.
+  Final agent  : agent_gamma
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 2', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 762
+    time     : 21.013s
+  Agent 2 (agent_epsilon)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 752
+    time     : 21.434s
+  Agent 3 (agent_alpha)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 753
+    time     : 16.441s
+  Agent 4 (agent_beta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to bed 1', 'go to bed 2', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 751
+    time     : 14.307s
+  Agent 5 (agent_gamma)
+    memories : 4
+    steps    : 15
+    actions  : ['go to coffeetable 1', 'go to drawer 1', 'go to armchair 1', 'go to armchair 2', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'examine drawer 1', 'close drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 763
+    time     : 15.212s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3781
+  end-to-end  : 88.407s
+
+══════════════════════════════════════════════════════════════
+  TASK 4/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a cool plate in cabinet.
+  Final agent  : agent_delta
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 0
+    steps    : 15
+    actions  : ['go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to cabinet 1', 'go to countertop 1', 'go to drawer 1', 'go to countertop 1', 'go to drawer 1', 'go to cabinet 1', 'go to countertop 1', 'go to cabinet 1', 'go to countertop 1', 'examine countertop 1', 'go to cabinet 1', 'go to countertop 1']
+    success  : ✗
+    tokens   : 757
+    time     : 19.18s
+  Agent 2 (agent_alpha)
+    memories : 1
+    steps    : 15
+    actions  : ['go to countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'open cabinet 1']
+    success  : ✗
+    tokens   : 750
+    time     : 19.959s
+  Agent 3 (agent_beta)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 2', 'go to cabinet 1', 'go to countertop 1', 'take bowl 2 from countertop 1', 'go to cabinet 1', 'examine bowl 2', 'go to countertop 1', 'examine countertop 1', 'examine bowl 2', 'go to drawer 1', 'go to countertop 1', 'go to cabinet 1', 'examine bowl 2', 'examine bowl 2']
+    success  : ✗
+    tokens   : 754
+    time     : 15.223s
+  Agent 4 (agent_gamma)
+    memories : 3
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to bed 1', 'take book 1 from bed 1', 'examine book 1', 'go to cabinet 1', 'open cabinet 1', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'go to cabinet 1', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 764
+    time     : 14.693s
+  Agent 5 (agent_delta)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'examine countertop 1', 'take dishsponge 1 from countertop 1', 'examine dishsponge 1', 'examine countertop 1', 'go to cabinet 1', 'go to cabinet 10', 'open cabinet 10', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1']
+    success  : ✗
+    tokens   : 742
+    time     : 25.087s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3767
+  end-to-end  : 94.141s
+
+══════════════════════════════════════════════════════════════
+  TASK 5/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some candle on toilet.
+  Final agent  : agent_epsilon
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'open cabinet 10', 'close cabinet 10', 'examine cabinet 10', 'open cabinet 10']
+    success  : ✗
+    tokens   : 750
+    time     : 20.111s
+  Agent 2 (agent_beta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'go to drawer 1']
+    success  : ✗
+    tokens   : 755
+    time     : 15.3s
+  Agent 3 (agent_gamma)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to sinkbasin 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 768
+    time     : 16.255s
+  Agent 4 (agent_delta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 763
+    time     : 25.167s
+  Agent 5 (agent_epsilon)
+    memories : 4
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to cabinet 1', 'go to toilet 1', 'take candle 1 from toilet 1', 'move candle 1 to toilet 1', 'examine toilet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'go to toilet 1', 'examine toilet 1', 'take soapbar 3 from toilet 1', 'go to bathtubbasin 1', 'examine soapbar 3']
+    success  : ✗
+    tokens   : 754
+    time     : 19.287s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3790
+  end-to-end  : 96.121s
+
+══════════════════════════════════════════════════════════════
+  TASK 6/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some remotecontrol on armchair.
+  Final agent  : agent_alpha
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'open cabinet 2', 'close cabinet 1', 'close cabinet 2', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'close cabinet 10']
+    success  : ✗
+    tokens   : 750
+    time     : 17.25s
+  Agent 2 (agent_gamma)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 764
+    time     : 14.517s
+  Agent 3 (agent_delta)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10']
+    success  : ✗
+    tokens   : 735
+    time     : 21.888s
+  Agent 4 (agent_epsilon)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 751
+    time     : 20.704s
+  Agent 5 (agent_alpha)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 752
+    time     : 17.401s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3752
+  end-to-end  : 91.76s
+
+══════════════════════════════════════════════════════════════
+  TASK 7/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some mug on sidetable.
+  Final agent  : agent_beta
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 0
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'go to toilet 1', 'examine toilet 1', 'examine toilet 1', 'examine toilet 1', 'examine toilet 1', 'examine toilet 1', 'go to bathtubbasin 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 764
+    time     : 15.13s
+  Agent 2 (agent_delta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'open cabinet 1', 'close cabinet 1', 'go to countertop 1', 'examine countertop 1', 'take candle 3 from countertop 1']
+    success  : ✗
+    tokens   : 760
+    time     : 19.317s
+  Agent 3 (agent_epsilon)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 754
+    time     : 22.211s
+  Agent 4 (agent_alpha)
+    memories : 3
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to armchair 1', 'examine armchair 1', 'examine armchair 1', 'take laptop 1 from armchair 1', 'go to drawer 1', 'go to armchair 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 750
+    time     : 17.835s
+  Agent 5 (agent_beta)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 757
+    time     : 17.063s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3785
+  end-to-end  : 91.556s
+
+══════════════════════════════════════════════════════════════
+  TASK 8/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some egg on microwave.
+  Final agent  : agent_gamma
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'take soapbar 1 from countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to sinkbasin 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1']
+    success  : ✗
+    tokens   : 764
+    time     : 18.75s
+  Agent 2 (agent_epsilon)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to cart 1', 'examine cart 1', 'go to shelf 1', 'examine shelf 1', 'examine shelf 1', 'examine shelf 1', 'examine shelf 1', 'examine shelf 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to shelf 1', 'go to garbagecan 1']
+    success  : ✗
+    tokens   : 753
+    time     : 18.756s
+  Agent 3 (agent_alpha)
+    memories : 2
+    steps    : 15
+    actions  : ['go to countertop 1', 'examine countertop 1', 'take peppershaker 1 from countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1']
+    success  : ✗
+    tokens   : 756
+    time     : 17.34s
+  Agent 4 (agent_beta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1']
+    success  : ✗
+    tokens   : 760
+    time     : 17.063s
+  Agent 5 (agent_gamma)
+    memories : 4
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to armchair 1', 'go to drawer 1', 'examine drawer 1', 'go to armchair 1', 'examine armchair 1', 'go to drawer 1', 'examine drawer 1', 'go to armchair 1', 'go to coffeetable 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1']
+    success  : ✗
+    tokens   : 765
+    time     : 17.008s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3798
+  end-to-end  : 88.917s
+
+══════════════════════════════════════════════════════════════
+  TASK 9/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some tissuebox on toilet.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 752
+    time     : 20.503s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to sinkbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to toilet 1', 'examine toilet 1', 'examine toilet 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to toilet 1', 'examine toilet 1', 'take candle 1 from toilet 1']
+    success  : ✗
+    tokens   : 749
+    time     : 16.211s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2', 'open drawer 2', 'examine drawer 2', 'close drawer 2', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 754
+    time     : 18.581s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'take cloth 1 from bathtubbasin 1', 'move cloth 1 to bathtubbasin 1', 'examine bathtubbasin 1', 'go to cart 1', 'examine cart 1', 'examine cart 1', 'take spraybottle 3 from cart 1', 'examine cart 1', 'move spraybottle 3 to cart 1', 'examine cart 1', 'examine cart 1', 'examine cart 1', 'go to bathtubbasin 1']
+    success  : ✗
+    tokens   : 762
+    time     : 16.318s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'go to cabinet 1', 'go to cabinet 2', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 2', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 755
+    time     : 24.353s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3772
+  end-to-end  : 95.965s
+
+══════════════════════════════════════════════════════════════
+  TASK 10/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a clean soapbar in toilet.
+  Final agent  : agent_epsilon
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1']
+    success  : ✗
+    tokens   : 752
+    time     : 18.298s
+  Agent 2 (agent_beta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 758
+    time     : 20.385s
+  Agent 3 (agent_gamma)
+    memories : 2
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 767
+    time     : 16.794s
+  Agent 4 (agent_delta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to countertop 1', 'go to toilet 1', 'go to bathtubbasin 1', 'take cloth 1 from bathtubbasin 1', 'examine bathtubbasin 1', 'go to toilet 1', 'examine cloth 1', 'examine cloth 1', 'examine cloth 1', 'examine cloth 1', 'examine cloth 1', 'examine cloth 1', 'examine cloth 1', 'go to bathtubbasin 1']
+    success  : ✗
+    tokens   : 762
+    time     : 20.853s
+  Agent 5 (agent_epsilon)
+    memories : 4
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1']
+    success  : ✗
+    tokens   : 751
+    time     : 22.288s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3790
+  end-to-end  : 98.618s
+
+══════════════════════════════════════════════════════════════
+  TASK 11/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: clean some plate and put it in fridge.
+  Final agent  : agent_alpha
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'open cabinet 3', 'go to bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'take candle 3 from countertop 1', 'examine candle 3', 'examine candle 3']
+    success  : ✗
+    tokens   : 749
+    time     : 15.575s
+  Agent 2 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'examine armchair 1', 'examine armchair 1', 'go to armchair 2', 'go to armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'go to armchair 2', 'take laptop 3 from armchair 2', 'go to armchair 1', 'go to armchair 2', 'go to armchair 1']
+    success  : ✗
+    tokens   : 768
+    time     : 17.27s
+  Agent 3 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to garbagecan 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to garbagecan 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to garbagecan 1', 'go to bathtubbasin 1', 'take soapbar 3 from bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 765
+    time     : 21.096s
+  Agent 4 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'take apple 2 from countertop 1', 'examine apple 2', 'go to cabinet 1', 'examine apple 2', 'go to fridge 1', 'cool apple 2 with fridge 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine apple 2', 'examine apple 2', 'go to sinkbasin 1', 'go to fridge 1']
+    success  : ✗
+    tokens   : 755
+    time     : 23.253s
+  Agent 5 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'take creditcard 1 from armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'examine armchair 1', 'move creditcard 1 to armchair 1']
+    success  : ✗
+    tokens   : 751
+    time     : 16.382s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3788
+  end-to-end  : 93.576s
+
+══════════════════════════════════════════════════════════════
+  TASK 12/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a cool apple in microwave.
+  Final agent  : agent_beta
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'examine cabinet 10', 'close cabinet 10', 'open cabinet 10', 'examine cabinet 10', 'close cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 765
+    time     : 18.845s
+  Agent 2 (agent_delta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'take keychain 1 from sidetable 1', 'examine keychain 1', 'examine keychain 1', 'examine keychain 1', 'examine keychain 1', 'examine keychain 1', 'examine keychain 1', 'go to drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 761
+    time     : 18.702s
+  Agent 3 (agent_epsilon)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'take saltshaker 2 from cabinet 2', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 752
+    time     : 22.048s
+  Agent 4 (agent_alpha)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 752
+    time     : 22.584s
+  Agent 5 (agent_beta)
+    memories : 4
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1', 'take candle 2 from countertop 1', 'examine candle 2', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 765
+    time     : 15.521s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3795
+  end-to-end  : 97.7s
+
+══════════════════════════════════════════════════════════════
+  TASK 13/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put two toiletpaper in toilet.
+  Final agent  : agent_gamma
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'go to coffeetable 1', 'examine coffeetable 1', 'go to armchair 1', 'go to coffeetable 1', 'examine coffeetable 1', 'go to armchair 1', 'examine armchair 1', 'go to drawer 1', 'open drawer 1', 'close drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 765
+    time     : 19.761s
+  Agent 2 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 751
+    time     : 23.709s
+  Agent 3 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'go to drawer 2']
+    success  : ✗
+    tokens   : 754
+    time     : 17.836s
+  Agent 4 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 754
+    time     : 20.878s
+  Agent 5 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to coffeemachine 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'go to drawer 1', 'examine drawer 1', 'go to coffeemachine 1', 'go to cabinet 1', 'go to coffeemachine 1', 'go to cabinet 1', 'go to coffeemachine 1', 'go to drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 768
+    time     : 18.001s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3792
+  end-to-end  : 100.185s
+
+══════════════════════════════════════════════════════════════
+  TASK 14/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some mug on sidetable.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 748
+    time     : 24.309s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 748
+    time     : 16.857s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 758
+    time     : 20.651s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 2', 'examine drawer 2', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 766
+    time     : 19.349s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine garbagecan 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 757
+    time     : 22.957s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3777
+  end-to-end  : 104.122s
+
+══════════════════════════════════════════════════════════════
+  TASK 15/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: find two book and put them in desk.
+  Final agent  : agent_epsilon
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 0
+    steps    : 15
+    actions  : ['go to toilet 1', 'take candle 1 from toilet 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine candle 1', 'examine candle 1', 'go to sinkbasin 1', 'examine candle 1', 'examine candle 1', 'go to bathtubbasin 1', 'go to drawer 1', 'examine candle 1', 'examine drawer 1', 'examine candle 1']
+    success  : ✗
+    tokens   : 752
+    time     : 16.326s
+  Agent 2 (agent_beta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bed 1', 'take book 1 from bed 1', 'examine book 1', 'examine bed 1', 'move book 1 to bed 1', 'examine bed 1', 'examine bed 1', 'take book 1 from bed 1', 'examine bed 1', 'move book 1 to bed 1', 'take book 1 from bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 753
+    time     : 14.579s
+  Agent 3 (agent_gamma)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to drawer 2', 'examine sinkbasin 1', 'go to cabinet 1', 'go to drawer 1', 'go to sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'take fork 2 from sinkbasin 1', 'clean fork 2 with sinkbasin 1', 'clean fork 2 with sinkbasin 1', 'clean fork 2 with sinkbasin 1', 'clean fork 2 with sinkbasin 1']
+    success  : ✗
+    tokens   : 765
+    time     : 18.084s
+  Agent 4 (agent_delta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 764
+    time     : 22.195s
+  Agent 5 (agent_epsilon)
+    memories : 4
+    steps    : 15
+    actions  : ['go to diningtable 1', 'take bread 1 from diningtable 1', 'go to cabinet 1', 'go to drawer 1', 'examine bread 1', 'go to drawer 2', 'examine bread 1', 'go to cabinet 1', 'examine bread 1', 'examine bread 1', 'examine bread 1', 'go to drawer 1', 'examine bread 1', 'examine bread 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 759
+    time     : 22.771s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3793
+  end-to-end  : 93.955s
+
+══════════════════════════════════════════════════════════════
+  TASK 16/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: clean some ladle and put it in diningtable.
+  Final agent  : agent_alpha
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'open cabinet 1', 'take plate 1 from cabinet 1', 'examine plate 1', 'close cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine plate 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine plate 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 755
+    time     : 16.842s
+  Agent 2 (agent_gamma)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bed 1', 'examine bed 1', 'take cellphone 1 from bed 1', 'examine bed 1', 'go to cabinet 1', 'go to drawer 1', 'examine cellphone 1', 'examine cellphone 1', 'examine cellphone 1', 'open drawer 1', 'go to bed 1', 'move cellphone 1 to bed 1', 'take book 1 from bed 1', 'go to cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 765
+    time     : 16.342s
+  Agent 3 (agent_delta)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'examine cabinet 3', 'go to cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 761
+    time     : 22.412s
+  Agent 4 (agent_epsilon)
+    memories : 3
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'open drawer 1', 'close drawer 1', 'go to bed 1']
+    success  : ✗
+    tokens   : 748
+    time     : 20.622s
+  Agent 5 (agent_alpha)
+    memories : 4
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 753
+    time     : 18.569s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3782
+  end-to-end  : 94.787s
+
+══════════════════════════════════════════════════════════════
+  TASK 17/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: look at alarmclock under the desklamp.
+  Final agent  : agent_beta
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 0
+    steps    : 15
+    actions  : ['go to sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'take knife 1 from sidetable 1', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 2', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 768
+    time     : 17.61s
+  Agent 2 (agent_delta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'look', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'look']
+    success  : ✗
+    tokens   : 756
+    time     : 24.446s
+  Agent 3 (agent_epsilon)
+    memories : 2
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to countertop 1', 'examine countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'go to countertop 1']
+    success  : ✗
+    tokens   : 752
+    time     : 24.668s
+  Agent 4 (agent_alpha)
+    memories : 3
+    steps    : 15
+    actions  : ['go to bed 1', 'go to bed 2', 'examine bed 2', 'examine bed 2', 'go to sidetable 1', 'take alarmclock 3 from sidetable 1', 'examine alarmclock 3', 'examine alarmclock 3', 'go to desk 1', 'examine alarmclock 3', 'examine alarmclock 3', 'move alarmclock 3 to desk 1', 'examine desk 1', 'take alarmclock 2 from desk 1', 'examine alarmclock 2']
+    success  : ✗
+    tokens   : 753
+    time     : 16.99s
+  Agent 5 (agent_beta)
+    memories : 4
+    steps    : 15
+    actions  : ['go to diningtable 1', 'take bread 1 from diningtable 1', 'move bread 1 to diningtable 1', 'take bread 1 from diningtable 1', 'examine bread 1', 'examine bread 1', 'examine bread 1', 'examine bread 1', 'examine bread 1', 'examine bread 1', 'go to cabinet 1', 'examine bread 1', 'examine bread 1', 'examine bread 1', 'examine bread 1']
+    success  : ✗
+    tokens   : 754
+    time     : 16.974s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3783
+  end-to-end  : 100.689s
+
+══════════════════════════════════════════════════════════════
+  TASK 18/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a hot mug in cabinet.
+  Final agent  : agent_gamma
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 763
+    time     : 25.22s
+  Agent 2 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'take egg 1 from countertop 1', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to countertop 1', 'examine countertop 1', 'go to cabinet 1', 'open cabinet 1', 'close cabinet 1', 'open cabinet 1', 'go to cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 757
+    time     : 22.354s
+  Agent 3 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'take cloth 1 from bathtubbasin 1', 'examine bathtubbasin 1', 'go to drawer 1', 'examine drawer 1', 'examine cloth 1', 'examine cloth 1', 'go to towelholder 1', 'examine cloth 1', 'examine cloth 1', 'go to drawer 1', 'examine cloth 1', 'examine cloth 1', 'go to countertop 1', 'examine cloth 1']
+    success  : ✗
+    tokens   : 749
+    time     : 17.25s
+  Agent 4 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'examine bed 1', 'take book 1 from bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'move book 1 to bed 1', 'take laptop 1 from bed 1', 'examine bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 749
+    time     : 15.578s
+  Agent 5 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 764
+    time     : 18.214s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3782
+  end-to-end  : 98.617s
+
+══════════════════════════════════════════════════════════════
+  TASK 19/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a hot mug in sidetable.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 752
+    time     : 25.232s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 753
+    time     : 18.967s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to countertop 1', 'examine countertop 1', 'go to countertop 2']
+    success  : ✗
+    tokens   : 753
+    time     : 18.026s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 768
+    time     : 19.021s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to countertop 1', 'take candle 2 from countertop 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1', 'move candle 2 to countertop 1', 'examine countertop 1', 'take candle 2 from countertop 1', 'examine candle 2', 'examine candle 2', 'examine candle 2', 'examine candle 2', 'examine candle 2', 'examine candle 2']
+    success  : ✗
+    tokens   : 763
+    time     : 21.395s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3789
+  end-to-end  : 102.64s
+
+══════════════════════════════════════════════════════════════
+  TASK 20/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: clean some mug and put it in coffeemachine.
+  Final agent  : agent_epsilon
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to microwave 1', 'examine microwave 1', 'examine microwave 1', 'go to cabinet 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'go to sinkbasin 1']
+    success  : ✗
+    tokens   : 754
+    time     : 18.027s
+  Agent 2 (agent_beta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to microwave 1', 'go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1']
+    success  : ✗
+    tokens   : 755
+    time     : 21.163s
+  Agent 3 (agent_gamma)
+    memories : 2
+    steps    : 15
+    actions  : ['go to bed 1', 'go to drawer 1', 'examine drawer 1', 'go to drawer 10', 'go to bed 1', 'go to drawer 1', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 765
+    time     : 17.079s
+  Agent 4 (agent_delta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to toilet 1', 'examine toilet 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'take soapbar 3 from bathtubbasin 1', 'examine bathtubbasin 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'move soapbar 3 to bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 763
+    time     : 20.108s
+  Agent 5 (agent_epsilon)
+    memories : 4
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to sinkbasin 1', 'examine sinkbasin 1', 'go to coffeemachine 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 753
+    time     : 22.388s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3790
+  end-to-end  : 98.765s
+
+══════════════════════════════════════════════════════════════
+  TASK 21/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: clean some plate and put it in fridge.
+  Final agent  : agent_alpha
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 2', 'go to fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'take creditcard 3 from countertop 1']
+    success  : ✗
+    tokens   : 761
+    time     : 19.147s
+  Agent 2 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'examine bed 1', 'examine bed 1', 'take book 1 from bed 1', 'move book 1 to bed 1', 'examine bed 1', 'take book 1 from bed 1', 'move book 1 to bed 1', 'go to shelf 1', 'take pen 2 from shelf 1', 'examine cabinet 3', 'move pen 2 to shelf 1', 'take pen 2 from shelf 1', 'move pen 2 to shelf 1', 'take pen 2 from shelf 1']
+    success  : ✗
+    tokens   : 762
+    time     : 16.197s
+  Agent 3 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'examine armchair 1', 'examine armchair 1', 'go to garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'go to armchair 1', 'go to coffeetable 1', 'take box 1 from coffeetable 1', 'examine box 1', 'examine box 1']
+    success  : ✗
+    tokens   : 764
+    time     : 20.943s
+  Agent 4 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 752
+    time     : 23.913s
+  Agent 5 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to sinkbasin 1', 'take butterknife 2 from sinkbasin 1', 'clean butterknife 2 with sinkbasin 1', 'clean butterknife 2 with sinkbasin 1', 'clean butterknife 2 with sinkbasin 1', 'clean butterknife 2 with sinkbasin 1', 'clean butterknife 2 with sinkbasin 1', 'examine butterknife 2', 'clean butterknife 2 with sinkbasin 1', 'clean butterknife 2 with sinkbasin 1', 'clean butterknife 2 with sinkbasin 1', 'go to countertop 1', 'examine butterknife 2', 'slice apple 2 with butterknife 2', 'slice apple 2 with butterknife 2']
+    success  : ✗
+    tokens   : 750
+    time     : 18.59s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3789
+  end-to-end  : 98.789s
+
+══════════════════════════════════════════════════════════════
+  TASK 22/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a hot mug in coffeemachine.
+  Final agent  : agent_beta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to desk 1', 'go to bed 1', 'go to desk 1', 'examine desk 1', 'go to bed 1', 'examine bed 1', 'go to desk 1', 'go to drawer 1', 'go to bed 1', 'go to drawer 1', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'take book 1 from bed 1']
+    success  : ✗
+    tokens   : 764
+    time     : 17.414s
+  Agent 2 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'examine bed 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'take cellphone 1 from drawer 1', 'close drawer 1', 'examine cellphone 1', 'examine cellphone 1', 'examine drawer 1', 'examine cellphone 1', 'go to bed 1', 'go to drawer 1', 'examine cellphone 1']
+    success  : ✗
+    tokens   : 762
+    time     : 20.059s
+  Agent 3 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to microwave 1', 'go to cabinet 1', 'open cabinet 1', 'close cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 752
+    time     : 23.0s
+  Agent 4 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 749
+    time     : 17.405s
+  Agent 5 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'open cabinet 2', 'close cabinet 1', 'go to cabinet 10']
+    success  : ✗
+    tokens   : 758
+    time     : 19.576s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3785
+  end-to-end  : 97.454s
+
+══════════════════════════════════════════════════════════════
+  TASK 23/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a soapbar in cart.
+  Final agent  : agent_gamma
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 758
+    time     : 20.932s
+  Agent 2 (agent_epsilon)
+    memories : 1
+    steps    : 15
+    actions  : ['go to armchair 1', 'go to armchair 2', 'go to coffeetable 1', 'take candle 1 from coffeetable 1', 'examine candle 1', 'go to diningtable 1', 'go to sidetable 1', 'go to diningtable 1', 'move candle 1 to diningtable 1', 'examine diningtable 1', 'go to sidetable 1', 'examine sidetable 1', 'go to diningtable 1', 'go to armchair 1', 'go to coffeetable 1']
+    success  : ✗
+    tokens   : 755
+    time     : 18.742s
+  Agent 3 (agent_alpha)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 751
+    time     : 21.135s
+  Agent 4 (agent_beta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'close cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 753
+    time     : 19.944s
+  Agent 5 (agent_gamma)
+    memories : 4
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'take soapbar 1 from bathtubbasin 1', 'go to sinkbasin 1', 'go to drawer 1', 'go to sinkbasin 1', 'clean soapbar 1 with sinkbasin 1', 'clean soapbar 1 with sinkbasin 1', 'go to drawer 1', 'examine drawer 1', 'go to sinkbasin 1', 'go to drawer 1', 'examine drawer 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1']
+    success  : ✗
+    tokens   : 763
+    time     : 18.36s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3780
+  end-to-end  : 99.112s
+
+══════════════════════════════════════════════════════════════
+  TASK 24/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: heat some tomato and put it in diningtable.
+  Final agent  : agent_delta
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to bathtubbasin 1']
+    success  : ✗
+    tokens   : 749
+    time     : 19.265s
+  Agent 2 (agent_alpha)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'go to sinkbasin 1', 'go to cabinet 1', 'close cabinet 1']
+    success  : ✗
+    tokens   : 749
+    time     : 16.955s
+  Agent 3 (agent_beta)
+    memories : 2
+    steps    : 15
+    actions  : ['go to bed 1', 'take book 1 from bed 1', 'move book 1 to bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'take book 1 from bed 1', 'examine book 1', 'examine book 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 751
+    time     : 16.881s
+  Agent 4 (agent_gamma)
+    memories : 3
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to bathtubbasin 1', 'go to countertop 1', 'go to bathtubbasin 1', 'go to countertop 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1', 'go to sinkbasin 1', 'examine sinkbasin 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 757
+    time     : 17.743s
+  Agent 5 (agent_delta)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'open cabinet 10', 'close cabinet 10', 'go to countertop 1']
+    success  : ✗
+    tokens   : 759
+    time     : 24.153s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3765
+  end-to-end  : 94.998s
+
+══════════════════════════════════════════════════════════════
+  TASK 25/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a clean ladle in diningtable.
+  Final agent  : agent_epsilon
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to diningtable 1', 'go to cabinet 1', 'examine cabinet 1', 'go to diningtable 1', 'go to cabinet 1', 'go to diningtable 1', 'take apple 1 from diningtable 1', 'examine apple 1', 'examine apple 1', 'examine apple 1']
+    success  : ✗
+    tokens   : 747
+    time     : 20.469s
+  Agent 2 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to drawer 2', 'examine drawer 2', 'go to fridge 1', 'examine fridge 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 757
+    time     : 17.695s
+  Agent 3 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to drawer 10', 'examine drawer 10', 'examine drawer 10', 'examine drawer 10', 'examine drawer 10', 'go to armchair 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 10', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 764
+    time     : 17.139s
+  Agent 4 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'go to armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'take creditcard 2 from armchair 2', 'examine creditcard 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine creditcard 2', 'examine armchair 2']
+    success  : ✗
+    tokens   : 764
+    time     : 21.208s
+  Agent 5 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'take soapbar 1 from bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 749
+    time     : 20.703s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3781
+  end-to-end  : 97.213s
+
+══════════════════════════════════════════════════════════════
+  TASK 26/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a clean soapbar in toilet.
+  Final agent  : agent_alpha
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'go to coffeemachine 1', 'go to drawer 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1']
+    success  : ✗
+    tokens   : 754
+    time     : 17.35s
+  Agent 2 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 766
+    time     : 18.39s
+  Agent 3 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 763
+    time     : 25.475s
+  Agent 4 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to drawer 2', 'examine drawer 2', 'examine drawer 2', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 754
+    time     : 22.748s
+  Agent 5 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 725
+    time     : 19.878s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3762
+  end-to-end  : 103.841s
+
+══════════════════════════════════════════════════════════════
+  TASK 27/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a cool apple in microwave.
+  Final agent  : agent_beta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'go to bed 1', 'go to bed 2', 'go to bed 1', 'go to bed 2', 'examine bed 2', 'examine bed 2', 'examine bed 2', 'examine bed 2', 'go to bed 1', 'examine bed 1', 'go to drawer 1', 'open drawer 1', 'go to drawer 10']
+    success  : ✗
+    tokens   : 765
+    time     : 17.288s
+  Agent 2 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'go to drawer 1', 'go to bed 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1']
+    success  : ✗
+    tokens   : 763
+    time     : 19.914s
+  Agent 3 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'take saltshaker 2 from cabinet 2', 'move saltshaker 2 to cabinet 1', 'go to fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'close cabinet 10', 'examine cabinet 10', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 755
+    time     : 22.268s
+  Agent 4 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to microwave 1', 'examine microwave 1', 'go to cabinet 1', 'go to microwave 1', 'go to cabinet 1', 'go to microwave 1', 'examine microwave 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 750
+    time     : 21.552s
+  Agent 5 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine garbagecan 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 758
+    time     : 16.839s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3791
+  end-to-end  : 97.861s
+
+══════════════════════════════════════════════════════════════
+  TASK 28/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: find two tissuebox and put them in toilet.
+  Final agent  : agent_gamma
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 761
+    time     : 23.094s
+  Agent 2 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 751
+    time     : 21.204s
+  Agent 3 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to sinkbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'go to sinkbasin 1', 'go to cabinet 1', 'go to sinkbasin 1', 'go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'go to toilet 1', 'examine toilet 1', 'examine toilet 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 753
+    time     : 16.385s
+  Agent 4 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to garbagecan 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'take soapbar 3 from bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine soapbar 3', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'move soapbar 3 to bathtubbasin 1']
+    success  : ✗
+    tokens   : 754
+    time     : 15.494s
+  Agent 5 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'go to sinkbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'go to sinkbasin 1', 'examine sinkbasin 1']
+    success  : ✗
+    tokens   : 765
+    time     : 15.754s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3784
+  end-to-end  : 91.93s
+
+══════════════════════════════════════════════════════════════
+  TASK 29/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a cool apple in garbagecan.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'go to fridge 1', 'go to countertop 1', 'examine countertop 1', 'go to fridge 1', 'examine fridge 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'examine cabinet 1', 'close cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 759
+    time     : 21.073s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'go to garbagecan 1', 'examine garbagecan 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'go to fridge 1']
+    success  : ✗
+    tokens   : 752
+    time     : 18.872s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 753
+    time     : 20.277s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 10', 'go to drawer 1']
+    success  : ✗
+    tokens   : 761
+    time     : 21.738s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'take soapbar 1 from bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to garbagecan 1', 'go to cabinet 1', 'go to garbagecan 1', 'go to cabinet 1', 'go to bathtubbasin 1']
+    success  : ✗
+    tokens   : 760
+    time     : 20.985s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3785
+  end-to-end  : 102.945s
+
+══════════════════════════════════════════════════════════════
+  TASK 30/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some bowl on coffeetable.
+  Final agent  : agent_epsilon
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 0
+    steps    : 15
+    actions  : ['look', 'go to bed 1', 'take book 1 from bed 1', 'examine book 1', 'examine bed 1', 'go to cabinet 1', 'examine book 1', 'examine cabinet 1', 'examine book 1', 'examine book 1', 'examine cabinet 1', 'examine book 1', 'go to bed 1', 'examine book 1', 'inventory']
+    success  : ✗
+    tokens   : 748
+    time     : 16.003s
+  Agent 2 (agent_beta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'inventory', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 751
+    time     : 18.032s
+  Agent 3 (agent_gamma)
+    memories : 2
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 765
+    time     : 16.548s
+  Agent 4 (agent_delta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 765
+    time     : 26.117s
+  Agent 5 (agent_epsilon)
+    memories : 4
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to armchair 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 756
+    time     : 21.524s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3785
+  end-to-end  : 98.224s
+
+══════════════════════════════════════════════════════════════
+  TASK 31/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some egg on microwave.
+  Final agent  : agent_alpha
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'go to microwave 1', 'examine microwave 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 755
+    time     : 16.085s
+  Agent 2 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cart 1', 'go to bathtubbasin 1', 'go to shelf 1', 'go to shelf 2', 'go to bathtubbasin 1', 'go to cart 1', 'take dishsponge 1 from cart 1', 'move dishsponge 1 to cart 1', 'examine cart 1', 'go to handtowelholder 1', 'take handtowel 2 from handtowelholder 1', 'examine handtowel 2', 'examine handtowel 2', 'go to bathtubbasin 1', 'go to handtowelholder 1']
+    success  : ✗
+    tokens   : 764
+    time     : 15.663s
+  Agent 3 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'take candle 1 from countertop 1', 'examine candle 1', 'go to drawer 1', 'examine candle 1', 'examine drawer 1', 'examine drawer 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1', 'examine candle 1', 'examine countertop 1', 'go to bathtubbasin 1']
+    success  : ✗
+    tokens   : 762
+    time     : 21.912s
+  Agent 4 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'take potato 1 from countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to countertop 1', 'go to fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1']
+    success  : ✗
+    tokens   : 759
+    time     : 23.021s
+  Agent 5 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to microwave 1', 'examine microwave 1', 'examine microwave 1', 'examine microwave 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to cabinet 1', 'go to countertop 1', 'examine countertop 1']
+    success  : ✗
+    tokens   : 751
+    time     : 18.728s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3791
+  end-to-end  : 95.409s
+
+══════════════════════════════════════════════════════════════
+  TASK 32/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: heat some tomato and put it in fridge.
+  Final agent  : agent_beta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'go to sidetable 1', 'examine sidetable 1', 'go to armchair 1', 'examine armchair 1', 'go to armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'examine armchair 2', 'go to armchair 1', 'take creditcard 1 from armchair 1', 'examine armchair 1', 'go to armchair 2']
+    success  : ✗
+    tokens   : 747
+    time     : 15.888s
+  Agent 2 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'open cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'take candle 3 from countertop 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2']
+    success  : ✗
+    tokens   : 765
+    time     : 21.384s
+  Agent 3 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'take book 1 from bed 1', 'go to drawer 1', 'go to dresser 1', 'go to shelf 1', 'go to bed 1', 'examine bed 1', 'go to shelf 1', 'examine shelf 1', 'go to bed 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine book 1', 'examine book 1']
+    success  : ✗
+    tokens   : 756
+    time     : 21.906s
+  Agent 4 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'go to countertop 1', 'examine countertop 1', 'go to fridge 1', 'examine fridge 1', 'go to countertop 1', 'take mug 1 from countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to cabinet 1', 'go to diningtable 1']
+    success  : ✗
+    tokens   : 755
+    time     : 19.316s
+  Agent 5 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to countertop 1', 'take potato 1 from countertop 1', 'examine potato 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to fridge 1', 'examine fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1', 'cool potato 1 with fridge 1']
+    success  : ✗
+    tokens   : 755
+    time     : 17.885s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3778
+  end-to-end  : 96.378s
+
+══════════════════════════════════════════════════════════════
+  TASK 33/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a mug in sidetable.
+  Final agent  : agent_gamma
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'open cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'close cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 764
+    time     : 24.81s
+  Agent 2 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'take bread 1 from countertop 1', 'go to cabinet 1', 'examine bread 1', 'examine bread 1', 'examine cabinet 1', 'go to cabinet 10', 'examine bread 1', 'go to cabinet 1', 'examine bread 1', 'examine bread 1', 'examine bread 1', 'go to cabinet 10', 'open cabinet 10', 'close cabinet 10']
+    success  : ✗
+    tokens   : 756
+    time     : 24.165s
+  Agent 3 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'close cabinet 10']
+    success  : ✗
+    tokens   : 720
+    time     : 22.701s
+  Agent 4 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'take book 1 from bed 1', 'examine book 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'go to desk 1', 'examine book 1', 'go to garbagecan 1', 'go to shelf 1', 'examine book 1']
+    success  : ✗
+    tokens   : 756
+    time     : 15.143s
+  Agent 5 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'go to coffeetable 1', 'examine coffeetable 1', 'go to drawer 1', 'examine drawer 1', 'open drawer 1', 'go to armchair 1', 'go to drawer 1', 'close drawer 1', 'open drawer 1', 'go to armchair 1', 'go to drawer 1', 'go to armchair 1', 'go to coffeetable 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 763
+    time     : 18.325s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3759
+  end-to-end  : 105.143s
+
+══════════════════════════════════════════════════════════════
+  TASK 34/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: find two book and put them in desk.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 752
+    time     : 23.413s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'take tomato 2 from garbagecan 1', 'move tomato 2 to garbagecan 1', 'examine cabinet 1', 'take tomato 2 from garbagecan 1', 'examine tomato 2', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'open cabinet 10']
+    success  : ✗
+    tokens   : 720
+    time     : 18.518s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'take cloth 1 from bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine cloth 1', 'examine bathtubbasin 1', 'examine cloth 1', 'examine cloth 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 758
+    time     : 16.576s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'go to drawer 10', 'examine drawer 10', 'go to sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 762
+    time     : 23.243s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 758
+    time     : 25.668s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3750
+  end-to-end  : 107.418s
+
+══════════════════════════════════════════════════════════════
+  TASK 35/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: clean some fork and put it in drawer.
+  Final agent  : agent_epsilon
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 2', 'examine drawer 2', 'examine drawer 2']
+    success  : ✗
+    tokens   : 753
+    time     : 17.993s
+  Agent 2 (agent_beta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to handtowelholder 1', 'examine handtowelholder 1', 'go to sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'go to bathtubbasin 1']
+    success  : ✗
+    tokens   : 757
+    time     : 15.794s
+  Agent 3 (agent_gamma)
+    memories : 2
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'open cabinet 1', 'examine cabinet 1', 'close cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'go to cabinet 1', 'open cabinet 1']
+    success  : ✗
+    tokens   : 764
+    time     : 15.682s
+  Agent 4 (agent_delta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'go to cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 760
+    time     : 27.182s
+  Agent 5 (agent_epsilon)
+    memories : 4
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'examine sinkbasin 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 751
+    time     : 20.972s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3785
+  end-to-end  : 97.621s
+
+══════════════════════════════════════════════════════════════
+  TASK 36/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a clean soapbar in cabinet.
+  Final agent  : agent_alpha
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine coffeemachine 1', 'examine countertop 1', 'examine coffeemachine 1']
+    success  : ✗
+    tokens   : 754
+    time     : 16.838s
+  Agent 2 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to cabinet 2', 'go to drawer 1']
+    success  : ✗
+    tokens   : 772
+    time     : 17.103s
+  Agent 3 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'help', 'take book 1 from bed 1', 'examine bed 1', 'examine book 1', 'examine book 1', 'go to drawer 1', 'examine drawer 1', 'examine book 1', 'examine book 1', 'examine book 1', 'examine book 1', 'examine drawer 1', 'examine book 1', 'examine book 1']
+    success  : ✗
+    tokens   : 762
+    time     : 20.423s
+  Agent 4 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to stoveburner 1', 'examine stoveburner 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 749
+    time     : 22.674s
+  Agent 5 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'take book 1 from bed 1', 'examine bed 1', 'examine bed 1', 'examine book 1', 'examine bed 1', 'examine bed 1', 'go to drawer 1', 'examine book 1', 'examine book 1', 'examine book 1', 'examine book 1', 'examine drawer 1', 'examine book 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 740
+    time     : 15.623s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3777
+  end-to-end  : 92.66s
+
+══════════════════════════════════════════════════════════════
+  TASK 37/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some remotecontrol on armchair.
+  Final agent  : agent_beta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'go to bed 2', 'examine bed 2', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'go to bed 2', 'go to bed 1', 'go to bed 2', 'examine bed 2', 'take laptop 1 from bed 2', 'examine bed 2', 'go to bed 1', 'examine bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 766
+    time     : 16.306s
+  Agent 2 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'open cabinet 10', 'close cabinet 10', 'open cabinet 10', 'close cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 763
+    time     : 26.026s
+  Agent 3 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to diningtable 1', 'take bread 1 from diningtable 1', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'examine bread 1', 'go to cabinet 1', 'examine bread 1', 'examine bread 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine bread 1']
+    success  : ✗
+    tokens   : 763
+    time     : 22.844s
+  Agent 4 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 715
+    time     : 20.863s
+  Agent 5 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'open cabinet 1', 'take soapbottle 1 from cabinet 1', 'examine soapbottle 1', 'close cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'open drawer 1', 'close drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 758
+    time     : 17.878s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3765
+  end-to-end  : 103.917s
+
+══════════════════════════════════════════════════════════════
+  TASK 38/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put two newspaper in drawer.
+  Final agent  : agent_gamma
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 760
+    time     : 25.07s
+  Agent 2 (agent_epsilon)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 751
+    time     : 20.066s
+  Agent 3 (agent_alpha)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to drawer 2', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 748
+    time     : 17.359s
+  Agent 4 (agent_beta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'open drawer 1', 'close drawer 1', 'open drawer 1', 'close drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 750
+    time     : 16.92s
+  Agent 5 (agent_gamma)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'go to drawer 2', 'examine drawer 2', 'examine drawer 2']
+    success  : ✗
+    tokens   : 764
+    time     : 19.027s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3773
+  end-to-end  : 98.444s
+
+══════════════════════════════════════════════════════════════
+  TASK 39/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a book in sofa.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to diningtable 1', 'take apple 1 from diningtable 1', 'examine apple 1', 'go to cabinet 1', 'go to diningtable 1', 'examine diningtable 1', 'examine diningtable 1', 'examine apple 1', 'examine apple 1']
+    success  : ✗
+    tokens   : 756
+    time     : 23.055s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'take soapbar 3 from bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'clean soapbar 3 with sinkbasin 1', 'examine sinkbasin 1']
+    success  : ✗
+    tokens   : 746
+    time     : 15.725s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to coffeetable 1', 'take book 1 from coffeetable 1', 'examine book 1', 'examine book 1', 'move book 1 to coffeetable 1', 'examine coffeetable 1', 'examine coffeetable 1', 'take book 1 from coffeetable 1', 'examine book 1', 'examine book 1', 'examine book 1', 'examine book 1', 'examine book 1', 'move book 1 to coffeetable 1', 'take book 1 from coffeetable 1']
+    success  : ✗
+    tokens   : 750
+    time     : 15.129s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2', 'go to cabinet 1', 'go to cabinet 2']
+    success  : ✗
+    tokens   : 764
+    time     : 18.918s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cart 1', 'go to bathtubbasin 1', 'go to garbagecan 1', 'go to bathtubbasin 1', 'go to garbagecan 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to cart 1', 'examine cart 1', 'examine cart 1', 'examine cart 1', 'examine cart 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 764
+    time     : 22.263s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3780
+  end-to-end  : 95.09s
+
+══════════════════════════════════════════════════════════════
+  TASK 40/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put two toiletpaper in toilet.
+  Final agent  : agent_epsilon
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 750
+    time     : 21.249s
+  Agent 2 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'examine bed 1', 'take book 1 from bed 1', 'examine bed 1', 'examine bed 1', 'go to drawer 1', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'go to drawer 1', 'examine drawer 1', 'go to bed 1', 'examine bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 755
+    time     : 15.988s
+  Agent 3 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 2', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2']
+    success  : ✗
+    tokens   : 767
+    time     : 17.952s
+  Agent 4 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 763
+    time     : 22.876s
+  Agent 5 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to toilet 1', 'go to drawer 1', 'go to toiletpaperhanger 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to toiletpaperhanger 1', 'examine toiletpaperhanger 1', 'go to drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 758
+    time     : 20.921s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3793
+  end-to-end  : 98.985s
+
+══════════════════════════════════════════════════════════════
+  TASK 41/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: examine the bowl with the desklamp.
+  Final agent  : agent_alpha
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'close cabinet 10']
+    success  : ✗
+    tokens   : 750
+    time     : 18.093s
+  Agent 2 (agent_gamma)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to cabinet 10', 'go to cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 763
+    time     : 17.892s
+  Agent 3 (agent_delta)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'examine countertop 1']
+    success  : ✗
+    tokens   : 760
+    time     : 22.253s
+  Agent 4 (agent_epsilon)
+    memories : 3
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2']
+    success  : ✗
+    tokens   : 751
+    time     : 19.892s
+  Agent 5 (agent_alpha)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'close cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 752
+    time     : 19.595s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3776
+  end-to-end  : 97.725s
+
+══════════════════════════════════════════════════════════════
+  TASK 42/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some pencil on desk.
+  Final agent  : agent_beta
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 0
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 764
+    time     : 18.91s
+  Agent 2 (agent_delta)
+    memories : 1
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 765
+    time     : 22.596s
+  Agent 3 (agent_epsilon)
+    memories : 2
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to bed 1', 'take book 1 from bed 1', 'go to drawer 1', 'open drawer 1', 'examine book 1', 'examine book 1', 'close drawer 1', 'open drawer 1', 'go to bed 1', 'go to diningtable 1', 'examine diningtable 1', 'examine book 1', 'examine book 1', 'examine book 1']
+    success  : ✗
+    tokens   : 757
+    time     : 19.33s
+  Agent 4 (agent_alpha)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 749
+    time     : 15.955s
+  Agent 5 (agent_beta)
+    memories : 4
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1']
+    success  : ✗
+    tokens   : 757
+    time     : 18.421s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3792
+  end-to-end  : 95.213s
+
+══════════════════════════════════════════════════════════════
+  TASK 43/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some cellphone on bed.
+  Final agent  : agent_gamma
+  Memories/turn: [0, 1, 2, 3, 4]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 0
+    steps    : 15
+    actions  : ['go to cabinet 1', 'open cabinet 1', 'take plate 1 from cabinet 1', 'examine plate 1', 'close cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine plate 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 764
+    time     : 22.316s
+  Agent 2 (agent_epsilon)
+    memories : 1
+    steps    : 15
+    actions  : ['go to bed 1', 'take book 1 from bed 1', 'examine book 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'move book 1 to bed 1', 'go to desk 1', 'take cellphone 1 from desk 1', 'go to bed 1', 'examine bed 1', 'examine cellphone 1', 'examine bed 1', 'examine bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 743
+    time     : 19.046s
+  Agent 3 (agent_alpha)
+    memories : 2
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 748
+    time     : 21.004s
+  Agent 4 (agent_beta)
+    memories : 3
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 761
+    time     : 20.676s
+  Agent 5 (agent_gamma)
+    memories : 4
+    steps    : 15
+    actions  : ['go to bed 1', 'go to desk 1', 'go to bed 1', 'go to shelf 1', 'go to bed 1', 'take teddybear 1 from bed 1', 'go to desk 1', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'go to desk 1', 'examine desk 1', 'examine desk 1', 'examine desk 1', 'examine desk 1']
+    success  : ✗
+    tokens   : 764
+    time     : 15.805s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3780
+  end-to-end  : 98.848s
+
+══════════════════════════════════════════════════════════════
+  TASK 44/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put two spatula in drawer.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 751
+    time     : 21.035s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 754
+    time     : 17.659s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to coffeemachine 1', 'go to drawer 1', 'examine drawer 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'go to garbagecan 1', 'go to drawer 1', 'examine drawer 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 759
+    time     : 16.581s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 764
+    time     : 15.979s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'go to drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 760
+    time     : 23.504s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3788
+  end-to-end  : 94.758s
+
+══════════════════════════════════════════════════════════════
+  TASK 45/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a knife in sidetable.
+  Final agent  : agent_epsilon
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'examine sidetable 1', 'take pen 1 from sidetable 1', 'examine pen 1', 'examine pen 1', 'examine pen 1', 'examine pen 1', 'examine pen 1', 'examine pen 1', 'go to sidetable 2', 'examine sidetable 2', 'examine sidetable 2']
+    success  : ✗
+    tokens   : 747
+    time     : 16.352s
+  Agent 2 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'go to countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'examine countertop 1']
+    success  : ✗
+    tokens   : 757
+    time     : 19.476s
+  Agent 3 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'open cabinet 10', 'close cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'open cabinet 1', 'close cabinet 1', 'open cabinet 1']
+    success  : ✗
+    tokens   : 764
+    time     : 18.997s
+  Agent 4 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to toilet 1', 'examine toilet 1', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'go to garbagecan 1', 'go to shelf 1', 'examine shelf 1', 'examine shelf 1', 'examine shelf 1', 'examine shelf 1', 'take candle 1 from shelf 1', 'examine candle 1', 'examine candle 1', 'examine shelf 1', 'examine candle 1']
+    success  : ✗
+    tokens   : 765
+    time     : 21.27s
+  Agent 5 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'take candle 2 from countertop 1', 'examine candle 2', 'go to sinkbasin 1', 'go to bathtubbasin 1', 'go to toilet 1', 'go to countertop 1', 'examine candle 2', 'go to drawer 1', 'go to bathtubbasin 1', 'go to countertop 1', 'examine candle 2', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1']
+    success  : ✗
+    tokens   : 762
+    time     : 21.514s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3795
+  end-to-end  : 97.609s
+
+══════════════════════════════════════════════════════════════
+  TASK 46/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put a hot cup in cabinet.
+  Final agent  : agent_alpha
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine garbagecan 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'open drawer 1', 'take dishsponge 1 from drawer 1', 'close drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'examine dishsponge 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 756
+    time     : 16.781s
+  Agent 2 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'go to bed 1', 'take cellphone 1 from bed 1', 'examine bed 1', 'move cellphone 1 to bed 1', 'take laptop 1 from bed 1', 'examine bed 1', 'go to cabinet 1', 'go to bed 1', 'go to cabinet 1', 'go to bed 1', 'go to cabinet 1', 'go to bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 764
+    time     : 16.214s
+  Agent 3 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'open cabinet 10', 'close cabinet 10', 'open cabinet 10', 'close cabinet 10', 'open cabinet 10', 'examine cabinet 10', 'close cabinet 10', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 764
+    time     : 26.883s
+  Agent 4 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'take bread 2 from countertop 1', 'go to cabinet 1', 'open cabinet 1', 'examine bread 2', 'close cabinet 1', 'examine bread 2', 'go to countertop 1', 'examine countertop 1', 'examine bread 2', 'examine bread 2', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine bread 2']
+    success  : ✗
+    tokens   : 755
+    time     : 23.298s
+  Agent 5 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'examine bed 1', 'take book 1 from bed 1', 'examine bed 1', 'examine bed 1', 'examine book 1', 'examine bed 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 747
+    time     : 16.103s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3786
+  end-to-end  : 99.279s
+
+══════════════════════════════════════════════════════════════
+  TASK 47/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: clean some tomato and put it in countertop.
+  Final agent  : agent_beta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 763
+    time     : 17.524s
+  Agent 2 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'go to bathtubbasin 1', 'go to countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 761
+    time     : 20.883s
+  Agent 3 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to armchair 1', 'go to coffeetable 1', 'examine coffeetable 1', 'go to dresser 1', 'go to armchair 1', 'go to coffeetable 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'close drawer 1', 'examine drawer 1', 'examine drawer 1', 'open drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 756
+    time     : 20.156s
+  Agent 4 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to countertop 1', 'examine countertop 1', 'go to bathtubbasin 1', 'examine bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to bathtubbasin 1']
+    success  : ✗
+    tokens   : 749
+    time     : 16.586s
+  Agent 5 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'go to drawer 1', 'go to countertop 1', 'take apple 1 from countertop 1', 'move apple 1 to countertop 1', 'go to drawer 1', 'go to cabinet 1', 'go to drawer 1', 'examine drawer 1', 'open drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to countertop 1']
+    success  : ✗
+    tokens   : 752
+    time     : 21.446s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3781
+  end-to-end  : 96.596s
+
+══════════════════════════════════════════════════════════════
+  TASK 48/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: put some remotecontrol on armchair.
+  Final agent  : agent_gamma
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 2', 'examine cabinet 2', 'examine cabinet 2', 'examine cabinet 2']
+    success  : ✗
+    tokens   : 764
+    time     : 23.655s
+  Agent 2 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'take candle 1 from countertop 1', 'examine candle 1', 'examine countertop 1', 'examine candle 1', 'examine candle 1', 'go to drawer 1', 'examine drawer 1', 'examine candle 1', 'examine candle 1', 'examine candle 1', 'examine candle 1']
+    success  : ✗
+    tokens   : 749
+    time     : 20.686s
+  Agent 3 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'examine countertop 1', 'take candle 2 from countertop 1', 'examine candle 2', 'examine countertop 1', 'examine candle 2', 'examine candle 2', 'examine candle 2', 'examine candle 2', 'examine candle 2', 'examine candle 2', 'examine candle 2']
+    success  : ✗
+    tokens   : 750
+    time     : 16.758s
+  Agent 4 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 761
+    time     : 17.933s
+  Agent 5 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 766
+    time     : 18.51s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3790
+  end-to-end  : 97.543s
+
+══════════════════════════════════════════════════════════════
+  TASK 49/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: heat some tomato and put it in fridge.
+  Final agent  : agent_delta
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to countertop 1', 'examine countertop 1', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'go to cabinet 1', 'go to cabinet 10', 'go to fridge 1', 'go to cabinet 1', 'go to countertop 1']
+    success  : ✗
+    tokens   : 756
+    time     : 23.01s
+  Agent 2 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bed 1', 'go to drawer 1', 'go to bed 1', 'examine bed 1', 'examine bed 1', 'take pillow 1 from bed 1', 'go to diningtable 1', 'go to bed 1', 'examine bed 1', 'go to diningtable 1', 'examine diningtable 1', 'examine diningtable 1', 'go to drawer 1', 'go to bed 1', 'examine bed 1']
+    success  : ✗
+    tokens   : 751
+    time     : 15.943s
+  Agent 3 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to countertop 1', 'examine countertop 1', 'go to drawer 1', 'go to cabinet 1', 'examine cabinet 1', 'go to fridge 1', 'go to cabinet 1', 'go to fridge 1', 'go to cabinet 1', 'go to fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1']
+    success  : ✗
+    tokens   : 752
+    time     : 21.486s
+  Agent 4 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to fridge 1', 'go to cabinet 1', 'examine cabinet 1', 'go to drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1', 'examine drawer 1']
+    success  : ✗
+    tokens   : 766
+    time     : 18.246s
+  Agent 5 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to drawer 1', 'go to bathtubbasin 1', 'go to drawer 1', 'go to countertop 1', 'take soapbottle 1 from countertop 1', 'go to bathtubbasin 1', 'go to countertop 1', 'move soapbottle 1 to countertop 1', 'take soapbottle 1 from countertop 1', 'examine countertop 1', 'examine countertop 1', 'go to bathtubbasin 1', 'go to countertop 1', 'examine countertop 1', 'examine countertop 1']
+    success  : ✗
+    tokens   : 764
+    time     : 22.594s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3789
+  end-to-end  : 101.279s
+
+══════════════════════════════════════════════════════════════
+  TASK 50/50
+══════════════════════════════════════════════════════════════
+  Task         : Your task is to: look at alarmclock under the desklamp.
+  Final agent  : agent_epsilon
+  Memories/turn: [5, 5, 5, 5, 5]
+
+  [ Per Agent ]
+──────────────────────────────────────────────────────────────
+  Agent 1 (agent_alpha)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1']
+    success  : ✗
+    tokens   : 752
+    time     : 19.358s
+  Agent 2 (agent_beta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'go to coffeemachine 1', 'examine coffeemachine 1', 'go to fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1', 'examine fridge 1']
+    success  : ✗
+    tokens   : 760
+    time     : 16.967s
+  Agent 3 (agent_gamma)
+    memories : 5
+    steps    : 15
+    actions  : ['go to drawer 1', 'examine drawer 1', 'go to cabinet 1', 'go to drawer 1', 'go to drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2', 'examine drawer 2', 'go to countertop 1', 'go to drawer 1', 'examine drawer 1', 'go to drawer 2', 'go to drawer 1', 'go to cabinet 1']
+    success  : ✗
+    tokens   : 772
+    time     : 17.845s
+  Agent 4 (agent_delta)
+    memories : 5
+    steps    : 15
+    actions  : ['go to bathtubbasin 1', 'go to garbagecan 1', 'examine garbagecan 1', 'take papertowelroll 1 from garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine papertowelroll 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine garbagecan 1', 'examine papertowelroll 1', 'examine garbagecan 1', 'examine garbagecan 1']
+    success  : ✗
+    tokens   : 764
+    time     : 21.273s
+  Agent 5 (agent_epsilon)
+    memories : 5
+    steps    : 15
+    actions  : ['go to cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'examine cabinet 1', 'go to cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10', 'examine cabinet 10']
+    success  : ✗
+    tokens   : 755
+    time     : 24.667s
+
+  [ Summary ]
+──────────────────────────────────────────────────────────────
+  success     : ✗
+  score       : 0.0
+  total tokens: 3803
+  end-to-end  : 100.111s
+
+══════════════════════════════════════════════════════════════
+  FINAL RESULTS
+══════════════════════════════════════════════════════════════
+
+  Setup       : baseline | 5 agents | ALFWorld | N=50
+
+  1. Time per round (avg across 50 tasks):
+     Round 1 : 19.358s
+     Round 2 : 18.763s
+     Round 3 : 19.608s
+     Round 4 : 19.888s
+     Round 5 : 19.541s
+
+     End-to-end (avg) : 97.159s
+
+  2. Token consumption (avg per task) : 3781.6 tokens
+
+  3. Overall success rate : 0/50 = 0.0%

@@ -8,12 +8,11 @@ from sentence_transformers import SentenceTransformer, util as st_util
 
 _embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
-CONTRADICTION_THRESHOLD = 0.80
+CONTRADICTION_THRESHOLD = 0.60
 
 
 class BaseAgent:
     agent_id: str
-    persona:  str
     model_id: str
     _tok   = None
     _model = None
@@ -44,7 +43,7 @@ class BaseAgent:
 
     def probe(self, query: str, r_q: str, m_q: str) -> tuple[str, str]:
         prompt = (
-            f"You are {self.agent_id}: {self.persona}.\n\n"
+            f"You are {self.agent_id}.\n\n"
             f"There is a conflict between two claims about the following question:\n"
             f"Question: {query}\n\n"
             f"Claim A — Current agent's reasoning:\n{r_q}\n\n"
@@ -73,7 +72,7 @@ class BaseAgent:
 
         # ── TODO1 — reason first, before checking memory ──────
         prompt_initial = (
-            f"You are {self.agent_id}: {self.persona}.\n\n"
+            f"You are {self.agent_id}.\n\n"
             f"Question: {query}\n\n"
             f"Give a brief reasoning then your answer.\n"
             f"Reasoning:"
@@ -213,7 +212,7 @@ class BaseAgent:
         # ── Build final prompt with memory context ─────────────
         mem_block = "\n".join(f"  - {m}" for m in memories)
         prompt_final = (
-            f"You are {self.agent_id}: {self.persona}.\n"
+            f"You are {self.agent_id}\n"
             + (f"\n[Memory from other agents]\n{mem_block}\n" if memories else "")
             + f"\nQuestion: {query}\n\n"
             f"Give a brief reasoning then your answer.\n"

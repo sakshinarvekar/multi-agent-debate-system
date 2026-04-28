@@ -38,7 +38,7 @@ SHARED_USER = "shared"
 #         return [e["memory"] for e in entries if "memory" in e]
 #     except Exception:
 #         return []
-def search(query: str, top_k: int = 3, reasoning: str = "", threshold: float = 0.6) -> list[str]:
+def search(query: str, top_k: int = 5, reasoning: str = "", threshold: float = 0.3) -> list[str]:
     """
     Retrieval:
     1. Fetch ALL memories from ChromaDB
@@ -77,7 +77,7 @@ def search(query: str, top_k: int = 3, reasoning: str = "", threshold: float = 0
 
 
 
-def search_with_ids(query: str, top_k: int = 3, reasoning: str = "", threshold: float = 0.6) -> list[dict]:
+def search_with_ids(query: str, top_k: int = 5, reasoning: str = "", threshold: float = 0.6) -> list[dict]:
     try:
         all_entries = get_all_memories()
         if not all_entries:
@@ -147,14 +147,6 @@ def delete_memory(memory_id: str) -> bool:
         return False
 
 
-# def get_all_memories() -> list[dict]:
-#     """Get all memories with their IDs — used for trust score display."""
-#     try:
-#         results = _mem.get_all(user_id=SHARED_USER)
-#         entries = results.get("results", results) if isinstance(results, dict) else results
-#         return [{"id": e.get("id", ""), "memory": e.get("memory", "")} for e in entries]
-#     except Exception:
-#         return []
 def get_all_memories() -> list[dict]:
     try:
         results = _mem.get_all(user_id=SHARED_USER, limit=1000)
