@@ -34,7 +34,7 @@ When an agent receives a query it:
 ```
 query q
   ↓
-Alpha reasons independently      →  r_q, a_q
+Agents reasons sequentially      →  r_q, a_q
   ↓
 Search memory (q + r_q + a_q)   →  m_q
   ↓
@@ -55,30 +55,53 @@ save(q, r*, a*) to memory pool
 
 ## Agents
 
-| Agent | Model |
-|---|---|
-| Alpha | `Qwen2.5-1.5B-Instruct` |
-| Beta | `microsoft/phi-2` |
-| Gamma | `DeepSeek-R1-Distill-Qwen-1.5B` |
+| Agent | Model | Parameters |
+|---|---|---|
+| Alpha (α) | `Qwen2.5-1.5B-Instruct` | 1.5B |
+| Beta (β) | `microsoft/phi-2` | 2.7B |
+| Gamma (γ) | `DeepSeek-R1-Distill-Qwen-1.5B` | 1.5B |
+| Delta (δ) | `Mistral-7B-Instruct-v0.2` | 7B |
+| Epsilon (ε) | `Qwen2.5-7B-Instruct` | 7B |
 
 ---
+## Three Evaluation Setups
+
+| Setup | Memory Retrieval | Memory Saving | Contradiction Detection |
+|---|---|---|---|
+| No Memory | ✗ | ✗ | ✗ |
+| Baseline | ✓ | ✓ | ✗ |
+| Full PMA | ✓ | ✓ | ✓ |
+
+---
+
 ## Datasets
 
-| Dataset | Entries | Agent | Description |
-|---|---|---|---|
-| TruthfulQA | 100 | `agent_alpha` | Correct answers loaded via HuggingFace |
-| wrong_dataset | 50 | `bad_agent` | Handcrafted wrong answers — contradicts TruthfulQA |
-| test_dataset | 30 | mixed | Handcrafted — correct + wrong answers for quick demo |
+### HotpotQA — Distractor Setting
+- Multi-hop question answering dataset
+- Link: https://huggingface.co/datasets/hotpot_qa
+- Setting: distractor — each question paired with 10 context paragraphs (2 relevant + 8 distractors)
+- Context truncated to 1,500 chars due to GPU memory constraints
+- Metric: exact substring match accuracy
+
+### ALFWorld
+- Interactive text-based household environment
+- Link: https://github.com/alfworld/alfworld
+- Agents navigate rooms and manipulate objects to complete multi-step tasks
+- Setting: eval_in_distribution (valid_seen), 140 total games
+- Metric: task completion (done=True, score > 0)
+- Task types: pick_and_place_simple, look_at_obj_in_light, pick_clean_then_place_in_recep, pick_heat_then_place_in_recep, pick_cool_then_place_in_recep, pick_two_obj_and_place
 
 ---
 
 ## Memory System
 
 **Vector store:** ChromaDB  
-**Retrieval:** cosine similarity ≥ `0.6` — irrelevant memories are filtered out  
+**Embedding model:** `sentence-transformers/all-MiniLM-L6-v2`  
+**Retrieval threshold:** `0.3` (HotpotQA), `0.7` (ALFWorld)  
+**Top-K retrieval:** `5`  
 **Bayesian prior:** `0.5` (new memory — unknown trust)  
+**Contradiction threshold:** `0.60`  
 **Delete threshold (τ_low):** `0.2`  
-**Solidify threshold (τ_high):** `0.8`
 
 ### How Bayesian Scoring Works
 
@@ -100,39 +123,41 @@ multi-agent-debate-system/
 │
 ├── agents/
 │   ├── __init__.py
-│   ├── base_agent.py              # core pipeline logic
-│   └── specialized_agents.py     # Alpha, Beta, Gamma definitions
+│   ├── base_agent.py              # core pipeline, _generate, probe, contradiction
+│   └── specialized_agents.py     # Alpha, Beta, Gamma, Delta, Epsilon definitions
 │
 ├── memory/
 │   ├── __init__.py
-│   ├── mem0_store.py              # ChromaDB interface + filtered retrieval
-│   ├── trust_store.py             # Bayesian scoring per memory
-│   ├── test_dataset.py            # 30-entry handcrafted dataset
-│   └── wrong_dataset.py           # 50 wrong answers for contradiction testing
+│   ├── mem0_store.py              # ChromaDB interface, search, save, delete
+│   ├── trust_store.py             # Bayesian scoring, bayesian_update, should_delete
+│   └── memory_trust_scores.json  # Bayesian trust scores per memory ID
 │
 ├── scripts/
 │   ├── __init__.py
-│   ├── load_truthfulqa.py         # loads TruthfulQA correct answers
-│   ├── load_memories.py           # loads any dataset into ChromaDB
-│   └── inspect_memory.py          # shows memory pool with scores
+│   └── inspect_memory.py          # inspect ChromaDB memory pool
 │
-├── tests/
+├── eval/
 │   ├── __init__.py
-│   ├── demo_interactive.py        # interactive single-query demo
-│   ├── demo_insert_and_test.py    # controlled injection + Bayesian scoring demo
-│   ├── test_retrieval.py          # retrieval quality
-│   ├── test_retrieval2.py         # retrieval quality v2
-│   ├── test_contradiction.py      # contradiction detection
-│   ├── test_pipeline.py           # full end-to-end pipeline
-│   └── test_final_context.py      # memory vs own reasoning
+│   ├── load_datasets.py           # load_hotpotqa_distractor(n)
+│   ├── load_alfworld.py           # load_alfworld_env(n, split)
+│   ├── debate_no_memory_dis.py    # HotpotQA distractor — no memory
+│   ├── debate_baseline_dis.py     # HotpotQA distractor — baseline memory
+│   ├── debate_full_pma_dis.py     # HotpotQA distractor — full PMA
+│   ├── debate_no_memory_alf.py    # ALFWorld — no memory
+│   ├── debate_baseline_alf.py     # ALFWorld — baseline memory
+│   ├── debate_full_pma_alf.py     # ALFWorld — full PMA
+│   ├── run_debate.sh              # shell script to run all setups
+│   ├── no_memory_dis_log.txt      # HotpotQA no memory log
+│   ├── baseline_dis_log.txt       # HotpotQA baseline log
+│   ├── full_pma_dis_log.txt       # HotpotQA full PMA log
+│   ├── no_memory_alf_log.txt      # ALFWorld no memory log
+│   ├── baseline_alf_log.txt       # ALFWorld baseline log
+│   └── full_pma_alf_log.txt       # ALFWorld full PMA log
 │
-├── router.py                      # routes query through all agents sequentially
 ├── requirements.txt
-├── commands.txt
 ├── .gitignore
 └── README.md
 ```
-
 ---
 
 ## Setup
@@ -155,48 +180,42 @@ conda activate debate
 
 ```bash
 pip install -r requirements.txt
-pip install datasets
+pip install alfworld
 ```
 
-> **Hardware:** Auto-detects CUDA GPU, Apple MPS, or CPU. No manual configuration needed.
+### 4. Download ALFWorld game files
+
+```bash
+export ALFWORLD_DATA=~/.cache/alfworld
+alfworld-download
+```
 
 ---
 
-## Quick Start
+## Running Evaluation
+
+### HotpotQA Distractor
 
 ```bash
-# fresh start — clear all memory
 rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
-
-# load correct answers
-python scripts/load_truthfulqa.py
-
-# load wrong answers (for contradiction testing wrt truthfulqa dataset)
-python scripts/load_memories.py memory/wrong_dataset.py
-
-# inspect memory pool
-python scripts/inspect_memory.py
-
-
+CUDA_VISIBLE_DEVICES=3 nohup bash eval/run_debate.sh > eval/debate_log.txt 2>&1 &
+tail -f eval/debate_log.txt | grep -E "QUERY|accuracy|Contradictions"
 ```
 
----
-
-## Running Tests
+### ALFWorld
 
 ```bash
-# retrieval quality — no GPU needed
-python tests/test_retrieval.py
+# no memory
+rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
+CUDA_VISIBLE_DEVICES=3 python eval/debate_no_memory_alf.py
 
-# contradiction detection
-python tests/test_contradiction.py
+# baseline
+rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
+CUDA_VISIBLE_DEVICES=3 python eval/debate_baseline_alf.py
 
-# full pipeline
-python tests/test_pipeline.py
-
-# memory vs own reasoning
-python tests/test_final_context.py
-
+# full PMA
+rm -rf chroma_db/ memory/memory_trust_scores.json memory_snapshot.json
+CUDA_VISIBLE_DEVICES=3 python eval/debate_full_pma_alf.py
 ```
 
 ---
@@ -205,13 +224,25 @@ python tests/test_final_context.py
 
 | Parameter | Value | File |
 |---|---|---|
-| Contradiction threshold | `0.85` | `base_agent.py` |
-| Retrieval threshold | `0.6` | `mem0_store.py` |
-| Bayesian prior | `0.5` | `trust_store.py` |
-| Deletion threshold | `0.2` | `trust_store.py` |
-| Top-K retrieval | `3` | `mem0_store.py` |
+| Contradiction threshold | `0.60` | `agents/base_agent.py` |
+| Retrieval threshold (HotpotQA) | `0.3` | `eval/debate_*_dis.py` |
+| Retrieval threshold (ALFWorld) | `0.7` | `eval/debate_*_alf.py` |
+| Deletion threshold | `0.20` | `memory/trust_store.py` |
+| Top-K retrieval | `5` | `memory/mem0_store.py` |
+| Max new tokens (HotpotQA) | `300` | `eval/debate_*_dis.py` |
+| Max new tokens (ALFWorld) | `50` | `eval/debate_*_alf.py` |
+| Max steps per agent (ALFWorld) | `15` | `eval/debate_*_alf.py` |
 
 ---
+
+## Hardware
+
+- **GPU:** NVIDIA RTX 6000 Ada (49GB VRAM)
+- **Python:** 3.10
+- **Framework:** HuggingFace Transformers, ChromaDB, Mem0
+
+---
+
 
 ## Known Issues
 
@@ -221,9 +252,11 @@ chromadb/types.py: PydanticDeprecatedSince211
 ```
 
 ---
-
 ## References
 
-- **TruthfulQA** — Lin et al. (2022) · [arxiv.org/abs/2109.07958](https://arxiv.org/abs/2109.07958)
+- **HotpotQA** — Yang et al. (2018) · [arxiv.org/abs/1809.09600](https://arxiv.org/abs/1809.09600)
+- **ALFWorld** — Shridhar et al. (2021) · [arxiv.org/abs/2010.03768](https://arxiv.org/abs/2010.03768)
+- **ReAct** — Yao et al. (2023) · [arxiv.org/abs/2210.03629](https://arxiv.org/abs/2210.03629)
+- **G-Memory** — Zhang et al. (2025)
 - **Mem0** — [github.com/mem0ai/mem0](https://github.com/mem0ai/mem0)
 - **ChromaDB** — [github.com/chroma-core/chroma](https://github.com/chroma-core/chroma)

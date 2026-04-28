@@ -11,4 +11,8 @@ memory_snapshot.json
 memory_snapshot.json
 memory/memory_trust_scores.json
 eval/benchmark_log.txt
-eval/results_*.json
+eval/results_*.jsonchroma_db/
+memory/memory_trust_scores.json
+memory_snapshot.json
+__pycache__/
+*.pyc
